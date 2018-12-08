@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.6",
     "clone": "^2.1.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-jss": "^8.6.1",
+    "react-particles-js": "^2.4.2",
     "react-redux": "^5.1.1",
     "react-router-dom": "^4.3.1",
     "react-screen-size": "^2.0.1",

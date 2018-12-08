@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { handleScreenSizeChange } from "./redux/actions";
+import DesktopLayout from "./apps/LandingPage/Desktop/DesktopLayout";
 
 class App extends Component {
   componentDidMount() {
@@ -8,11 +9,20 @@ class App extends Component {
     window.addEventListener("resize", this.props.screenSizeChangeHandler);
   }
   componentWillUnmount() {
-    window.removeEventListener("resize");
+    window.removeEventListener("resize", this.props.screenSizeChangeHandler);
   }
 
   render() {
-    return <p>{`Screen is ${this.props.isDesktop ? "Desktop" : "Mobile"}`}</p>;
+    const { isDesktop } = this.props;
+    let layout = null;
+
+    if (isDesktop) {
+      layout = <DesktopLayout />;
+    } else {
+      layout = <p>Mobile</p>;
+    }
+
+    return layout;
   }
 }
 
@@ -21,7 +31,7 @@ const mapStateToProps = newState => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  screenSizeChangeHandler: () => dispatch(handleScreenSizeChange()) 
+  screenSizeChangeHandler: () => dispatch(handleScreenSizeChange())
 });
 
 export default connect(

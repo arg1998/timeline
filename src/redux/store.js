@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, compose, combineReducers } from "redux";
+import { createStore, compose, combineReducers } from "redux";
 import globalConfigsReducer from "./reducers/configReducer";
 
 const composeEnhancers =
@@ -10,6 +10,6 @@ const rootReducer = combineReducers({
   globalConfigs: globalConfigsReducer
 });
 
-const store = createStore(rootReducer, composeEnhancers());
+const store = createStore(rootReducer);
 
 export default store;
