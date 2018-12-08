@@ -9,7 +9,7 @@ import clone from "clone";
 const MIN_DESKTOP_SCREEN_WIDTH = 1500;
 const initialState = {
   screen: {
-    isDesktop: null
+    isDesktop: window.innerWidth >= MIN_DESKTOP_SCREEN_WIDTH
   }
 };
 
