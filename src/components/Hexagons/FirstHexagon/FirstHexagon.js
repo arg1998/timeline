@@ -1,7 +1,7 @@
 import React from "react";
 
 const FirstHexagon = props => (
-  <svg viewBox="1.931 -19.1 723.66 707.877" width={200} height={200}>
+  <svg viewBox="2 -20 723 710" width={200} height={200}>
     {/* main center hexagon */}
     <defs>
       <filter
@@ -13,10 +13,7 @@ const FirstHexagon = props => (
         filterUnits="objectBoundingBox"
         colorInterpolationFilters="sRGB"
       >
-        <feGaussianBlur
-          xmlns="http://www.w3.org/2000/svg"
-          stdDeviation={3}
-        />
+        <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation={2.5} />
       </filter>
     </defs>
     <g filter="url(#prefix__d)">
@@ -25,8 +22,7 @@ const FirstHexagon = props => (
         fill="none"
         vectorEffect="non-scaling-stroke"
         strokeWidth={4}
-        // stroke="#9D2CDF"
-        stroke='#5c6298'
+        stroke="#5c6298"
         strokeOpacity={1}
         strokeLinecap="square"
         strokeMiterlimit={3}
@@ -87,10 +83,7 @@ const FirstHexagon = props => (
         filterUnits="objectBoundingBox"
         colorInterpolationFilters="sRGB"
       >
-        <feGaussianBlur
-          xmlns="http://www.w3.org/2000/svg"
-          stdDeviation={2.147}
-        />
+        <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation={3} />
       </filter>
     </defs>
 
@@ -144,7 +137,7 @@ const FirstHexagon = props => (
         />
         <feGaussianBlur
           xmlns="http://www.w3.org/2000/svg"
-          stdDeviation={2.49}
+          stdDeviation={2.9}
           in="_out_8NHcuyQwcQ1CGQawprIyP1GsJCvIKlHc"
         />
       </filter>
@@ -192,7 +185,7 @@ const FirstHexagon = props => (
         />
         <feGaussianBlur
           xmlns="http://www.w3.org/2000/svg"
-          stdDeviation={2.147}
+          stdDeviation={3}
           in="_out_tlCJlb6WtIkqwJ7w79tsxMFXAkOiDntU"
         />
       </filter>
