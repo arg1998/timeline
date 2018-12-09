@@ -1,11 +1,11 @@
 import React from "react";
 
 const FirstHexagon = props => (
-  <svg viewBox="2 -20 723 710" width={200} height={200}>
+  <svg viewBox="10 -80 720 700" width={300} height={300}>
     {/* main center hexagon */}
     <defs>
       <filter
-        id="prefix__d"
+        id="first_hexagon_main_center"
         x="-200%"
         y="-200%"
         width="400%"
@@ -13,10 +13,10 @@ const FirstHexagon = props => (
         filterUnits="objectBoundingBox"
         colorInterpolationFilters="sRGB"
       >
-        <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation={2.5} />
+        <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation={4} />
       </filter>
     </defs>
-    <g filter="url(#prefix__d)">
+    <g filter="url(#first_hexagon_main_center)">
       <path
         d="M533.431 530.824h-250L157.775 307.547 282.12 85.824h249.999l125.656 221.723-124.344 223.277z"
         fill="none"
@@ -49,33 +49,9 @@ const FirstHexagon = props => (
     </g>
 
     {/* beehive 0 */}
-    <g
-      filter="url(#prefix__c)"
-      fill="none"
-      stroke="#70CBF2"
-      strokeLinecap="square"
-      strokeMiterlimit={2}
-      strokeOpacity={0.3}
-    >
-      <path
-        d="M156.285 309.271h-47.036l-23.641-42.784L109.003 224h47.036l23.641 42.487-23.395 42.784z"
-        vectorEffect="non-scaling-stroke"
-        strokeWidth={2}
-      />
-      <path
-        d="M234.605 350.906h-47.036l-23.641-42.784 23.395-42.487h47.036L258 308.122l-23.395 42.784z"
-        vectorEffect="non-scaling-stroke"
-        strokeWidth={2}
-      />
-      <path
-        d="M85.608 351.906H38.572l-23.641-42.784 23.394-42.486h47.036l23.642 42.486-23.395 42.784zM85.608 266.636H38.572l-23.641-42.784 23.395-42.487h47.036l23.641 42.487-23.395 42.784z"
-        vectorEffect="non-scaling-stroke"
-        strokeWidth={2}
-      />
-    </g>
     <defs>
       <filter
-        id="prefix__c"
+        id="first_hexagon_beehive_0"
         x="-200%"
         y="-200%"
         width="400%"
@@ -83,46 +59,43 @@ const FirstHexagon = props => (
         filterUnits="objectBoundingBox"
         colorInterpolationFilters="sRGB"
       >
-        <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation={3} />
+        <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation={4} />
       </filter>
     </defs>
+    <g
+      fill="none"
+      stroke="#70CBF2"
+      strokeLinecap="square"
+      strokeMiterlimit={10}
+      strokeWidth={6}
+      strokeOpacity={0.3}
+      vectorEffect="non-scaling-stroke"
+      filter="url(#first_hexagon_beehive_0)"
+    >
+      <path d="M156.285 309.271h-47.036l-23.641-42.784L109.003 224h47.036l23.641 42.487-23.395 42.784z" />
+      <path d="M234.605 350.906h-47.036l-23.641-42.784 23.395-42.487h47.036L258 308.122l-23.395 42.784z" />
+      <path d="M85.608 351.906H38.572l-23.641-42.784 23.394-42.486h47.036l23.642 42.486-23.395 42.784zM85.608 266.636H38.572l-23.641-42.784 23.395-42.487h47.036l23.641 42.487-23.395 42.784z" />
+    </g>
 
     {/* beehive 1 */}
     <g
-      filter="url(#prefix__b)"
+      filter="url(#first_hexagon_beehive_1)"
       fill="none"
       strokeLinecap="square"
       strokeMiterlimit={3}
-      strokeOpacity={0.4}
+      strokeOpacity={0.6}
+      vectorEffect="non-scaling-stroke"
+      strokeWidth={3}
+      stroke="#66B9E0"
     >
-      <path
-        d="M604.865 128.406h-47.036l-23.642-42.784 23.395-42.486h47.036l23.641 42.486-23.394 42.784z"
-        vectorEffect="non-scaling-stroke"
-        strokeWidth={2}
-        stroke="#66B9E0"
-      />
-      <path
-        d="M529.606 176.27H482.57l-23.642-42.784L482.323 91h47.036L553 133.486l-23.394 42.784z"
-        vectorEffect="non-scaling-stroke"
-        strokeWidth={2}
-        stroke="#66B9E0"
-      />
-      <path
-        d="M675.295 171.148h-47.036l-23.641-42.785 23.394-42.486h47.036l23.642 42.486-23.395 42.785z"
-        vectorEffect="non-scaling-stroke"
-        strokeWidth={3}
-        stroke="#70CBF2"
-      />
-      <path
-        d="M675.295 85.771h-47.036l-23.641-42.784L628.012.5h47.036l23.642 42.487-23.395 42.784z"
-        vectorEffect="non-scaling-stroke"
-        strokeWidth={2}
-        stroke="#70CBF2"
-      />
+      <path d="M604.865 128.406h-47.036l-23.642-42.784 23.395-42.486h47.036l23.641 42.486-23.394 42.784z" />
+      <path d="M529.606 176.27H482.57l-23.642-42.784L482.323 91h47.036L553 133.486l-23.394 42.784z" />
+      <path d="M675.295 171.148h-47.036l-23.641-42.785 23.394-42.486h47.036l23.642 42.486-23.395 42.785z" />
+      <path d="M675.295 85.771h-47.036l-23.641-42.784L628.012.5h47.036l23.642 42.487-23.395 42.784z" />
     </g>
     <defs>
       <filter
-        id="prefix__b"
+        id="first_hexagon_beehive_1"
         x="-200%"
         y="-200%"
         width="400%"
@@ -145,32 +118,22 @@ const FirstHexagon = props => (
 
     {/* beehive 2 */}
     <g
-      filter="url(#prefix__a)"
+      filter="url(#first_hexagon_beehive_2)"
       fill="none"
       stroke="#70CBF2"
-      strokeOpacity={0.5}
+      strokeOpacity={0.8}
       strokeLinecap="square"
       strokeMiterlimit={3}
+      vectorEffect="non-scaling-stroke"
+      strokeWidth={2}
     >
-      <path
-        d="M534.554 618.042h-47.036l-23.641-42.785 23.394-42.486h47.036l23.642 42.486-23.395 42.785zM605.462 575.406h-47.036l-23.642-42.784 23.395-42.486h47.036l23.641 42.486-23.394 42.784z"
-        vectorEffect="non-scaling-stroke"
-        strokeWidth={2}
-      />
-      <path
-        d="M605.193 660.677h-47.036l-23.641-42.784 23.394-42.487h47.036l23.642 42.487-23.395 42.784z"
-        vectorEffect="non-scaling-stroke"
-        strokeWidth={2}
-      />
-      <path
-        d="M529.605 519.271h-47.036l-23.641-42.784L482.322 434h47.036L553 476.487l-23.395 42.784z"
-        vectorEffect="non-scaling-stroke"
-        strokeWidth={2}
-      />
+      <path d="M534.554 618.042h-47.036l-23.641-42.785 23.394-42.486h47.036l23.642 42.486-23.395 42.785zM605.462 575.406h-47.036l-23.642-42.784 23.395-42.486h47.036l23.641 42.486-23.394 42.784z" />
+      <path d="M529.605 519.271h-47.036l-23.641-42.784L482.322 434h47.036L553 476.487l-23.395 42.784z" />
     </g>
+
     <defs>
       <filter
-        id="prefix__a"
+        id="first_hexagon_beehive_2"
         x="-200%"
         y="-200%"
         width="400%"
@@ -180,13 +143,8 @@ const FirstHexagon = props => (
       >
         <feGaussianBlur
           xmlns="http://www.w3.org/2000/svg"
-          stdDeviation={3}
+          stdDeviation={4}
           result="_out_tlCJlb6WtIkqwJ7w79tsxMFXAkOiDntU"
-        />
-        <feGaussianBlur
-          xmlns="http://www.w3.org/2000/svg"
-          stdDeviation={3}
-          in="_out_tlCJlb6WtIkqwJ7w79tsxMFXAkOiDntU"
         />
       </filter>
     </defs>
