@@ -6,7 +6,7 @@
 import * as actionTypes from "../actions/ActionTypes";
 import clone from "clone";
 
-const MIN_DESKTOP_SCREEN_WIDTH = 1500;
+const MIN_DESKTOP_SCREEN_WIDTH = 0;
 const initialState = {
   screen: {
     isDesktop: window.innerWidth >= MIN_DESKTOP_SCREEN_WIDTH
