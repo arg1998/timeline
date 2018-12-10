@@ -191,8 +191,8 @@ const FirstHexagon = props => {
  ***************** check default props for incoming data structures **************/
 
 FirstHexagon.propTypes = {
-  width: pt.number.isRequired,
-  height: pt.number.isRequired,
+  width: pt.oneOfType([pt.number, pt.string]).isRequired,
+  height: pt.oneOfType([pt.number, pt.string]).isRequired,
   style: pt.object,
   //optional styles and options for this hexagon
   mainHexagon: pt.object,
