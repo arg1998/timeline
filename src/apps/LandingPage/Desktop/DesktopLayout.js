@@ -72,7 +72,7 @@ class DesktopLayout extends Component {
 
           <div
             style={{
-              width: "85vh",
+              width: "80vw",
               height: "85vh",
               margin: "0 auto"
             }}

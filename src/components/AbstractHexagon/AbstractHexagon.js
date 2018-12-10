@@ -2,10 +2,8 @@ import React from "react";
 
 const AbstractHexagon = props => (
   <svg
-  viewBox="0 325 900 250"
-    style={{
-      isolation: "isolate"
-    }}
+  viewBox="0 0 900 900"
+  preserveAspectRatio="none"
     {...props}
   >
     <path
