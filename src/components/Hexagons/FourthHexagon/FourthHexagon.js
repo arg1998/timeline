@@ -8,8 +8,6 @@ const FourthHexagon = props => {
       }}
       viewBox="825.23 135.5 607.77 726.21"
       {...props}
-      width={300}
-      height={300}
     >
       {/* main center hexagon */}
 

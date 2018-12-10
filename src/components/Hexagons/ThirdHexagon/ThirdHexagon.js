@@ -8,8 +8,6 @@ const ThirdHexagon = props => {
       }}
       viewBox="90 70 730 400"
       {...props}
-      width={300}
-      height={300}
     >
       {/* octagonal wrapper
     <path
