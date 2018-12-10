@@ -7,6 +7,7 @@ const FirstHexagon = props => {
     width,
     height,
     style,
+    mainHexagon,
     beehiveStyles,
     linkedLinesStyles: LLS,
     miniHexagonsStyles
@@ -33,17 +34,17 @@ const FirstHexagon = props => {
           filterUnits="objectBoundingBox"
           colorInterpolationFilters="sRGB"
         >
-          <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation={4} />
+          <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation={mainHexagon.blurRadius} />
         </filter>
       </defs>
       <g filter="url(#first_hexagon_main_center)">
         <path
+          strokeWidth={mainHexagon.strokeWidth}
+          stroke={mainHexagon.strokeColor}
+          strokeOpacity={mainHexagon.strokeOpacity}
           d="M533.431 530.824h-250L157.775 307.547 282.12 85.824h249.999l125.656 221.723-124.344 223.277z"
           fill="none"
           vectorEffect="non-scaling-stroke"
-          strokeWidth={4}
-          stroke="#5c6298"
-          strokeOpacity={1}
           strokeLinecap="square"
           strokeMiterlimit={3}
         />
@@ -196,12 +197,19 @@ FirstHexagon.propTypes = {
   height: pt.number.isRequired,
   style: pt.object,
   //optional styles and options for this hexagon
+  mainHexagon: pt.object,
   beehiveStyles: pt.arrayOf(pt.object),
   linkedLinesStyles: pt.object,
   miniHexagonsStyles: pt.object
 };
 
 FirstHexagon.defaultProps = {
+  mainHexagon: {
+    strokeColor: "#5c6298",
+    strokeWidth: 4,
+    strokeOpacity: 1,
+    blurRadius: 4
+  },
   beehiveStyles: [
     // first beehive
     {
@@ -212,7 +220,7 @@ FirstHexagon.defaultProps = {
     },
     // second beehive
     {
-      blurRadius: 1.5,
+      blurRadius: 4,
       strokeColor: "#70CBF2",
       strokeWidth: 3,
       strokeOpacity: 0.6
