@@ -46,7 +46,6 @@ const SecondHexagon = props => {
         strokeLinejoin="round"
         d="M617 379.87L527.47 538.3H277.46L152.48 315.79 277.46 93.3h250.01L650 313.86"
         filter="url(#second_hexagon_main_center)"
-        vectorEffect="non-scaling-stroke"
       />
 
       {/* beehive 0 */}
@@ -316,7 +315,7 @@ SecondHexagon.propTypes = {
 SecondHexagon.defaultProps = {
   mainHexagon: {
     strokeColor: "#5c6298",
-    strokeWidth: 5,
+    strokeWidth: 15,
     strokeOpacity: 1,
     blurRadius: 4
   },

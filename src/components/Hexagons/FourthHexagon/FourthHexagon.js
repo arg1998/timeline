@@ -30,8 +30,7 @@ const FourthHexagon = props => {
       <path
         d="M1308 651l-61.67 110.67H996.32l-124.99-222.5 124.99-222.5h250.01l125 222.5L1354 570"
         fill="none"
-        vectorEffect="non-scaling-stroke"
-        strokeWidth={6}
+        strokeWidth={15}
         stroke="#5C6298"
         strokeOpacity={0.8}
         strokeLinejoin="round"

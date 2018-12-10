@@ -37,16 +37,14 @@ const FirstHexagon = props => {
           <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation={mainHexagon.blurRadius} />
         </filter>
       </defs>
-      <g filter="url(#first_hexagon_main_center)">
+      <g filter="url(#first_hexagon_main_center)" vectorEffect="non-scaling-stroke">
         <path
           strokeWidth={mainHexagon.strokeWidth}
           stroke={mainHexagon.strokeColor}
           strokeOpacity={mainHexagon.strokeOpacity}
           d="M533.431 530.824h-250L157.775 307.547 282.12 85.824h249.999l125.656 221.723-124.344 223.277z"
           fill="none"
-          vectorEffect="non-scaling-stroke"
           strokeLinecap="square"
-          strokeMiterlimit={3}
         />
       </g>
 
@@ -57,9 +55,9 @@ const FirstHexagon = props => {
         stroke={LLS.strokeColor}
         strokeOpacity={LLS.strokeOpacity}
         strokeLinecap="square"
+        vectorEffect="non-scaling-stroke"
       >
         <path
-          vectorEffect="non-scaling-stroke"
           d="M388.454 33.929v84M413 151l93 41M370.545 148.929L277 192M530 232l88 47M503.454 226.071L448 277M276.025 247.459l.124 36.541M446 325l2 67M253 321l-78 71M593 314.071L532 392M298 321l50 71M636 314.071L700 372"
         />
         <g
@@ -206,7 +204,7 @@ FirstHexagon.propTypes = {
 FirstHexagon.defaultProps = {
   mainHexagon: {
     strokeColor: "#5c6298",
-    strokeWidth: 4,
+    strokeWidth: 14,
     strokeOpacity: 1,
     blurRadius: 4
   },
@@ -235,7 +233,7 @@ FirstHexagon.defaultProps = {
   ],
   linkedLinesStyles: {
     strokeColor: "#7FC0EE",
-    strokeWidth: 3,
+    strokeWidth: 6,
     strokeOpacity: 0.5,
     dashSize: 12,
     dashGapSize: 15,
