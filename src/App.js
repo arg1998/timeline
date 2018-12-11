@@ -1,40 +1,24 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import { handleScreenSizeChange } from "./redux/actions";
+import withSizes from "react-sizes";
 import DesktopLayout from "./apps/LandingPage/Desktop/DesktopLayout";
+import bp from "./utils/BreakPoints";
 
 class App extends Component {
-  componentDidMount() {
-    //attaching the relevant ACTION DISPATCHER to the RESIZE event
-    window.addEventListener("resize", this.props.screenSizeChangeHandler);
-  }
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.props.screenSizeChangeHandler);
-  }
-
   render() {
     const { isDesktop } = this.props;
-    let layout = null;
 
+    let layout = <p>unsupported layout !!!</p>;
     if (isDesktop) {
       layout = <DesktopLayout />;
-    } else {
-      layout = <p>Mobile</p>;
     }
 
     return layout;
   }
 }
 
-const mapStateToProps = newState => ({
-  isDesktop: newState.globalConfigs.screen.isDesktop
+const mapSizesToProps = ({ width, height }) => ({
+  isDesktop: width > bp.desktop.minWidth,
+  screen: { w: width, h: height }
 });
 
-const mapDispatchToProps = dispatch => ({
-  screenSizeChangeHandler: () => dispatch(handleScreenSizeChange())
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default withSizes(mapSizesToProps)(App);
