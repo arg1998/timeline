@@ -4,7 +4,7 @@ const containerStyle = {
   // total container
   container: {
     background: {
-      color: "green"
+      color: "#fff"
     },
     height: "100%",
     display: "flex",
@@ -24,9 +24,6 @@ const containerStyle = {
     flexDirection: "column",
     width: "30%",
     height: "100%",
-    // background: {
-    //   color: "orange"
-    // },
     justifyContent: "space-around"
   },
   right_side: {
@@ -34,38 +31,12 @@ const containerStyle = {
     flexDirection: "column",
     width: "30%",
     height: "100%",
-    // background: {
-    //   color: "purple"
-    // },
     justifyContent: "space-around"
   },
-  first_hex: {
+  miniHexagons: {
     width: "100%",
     height: "30%",
-    background: {
-      color: "white"
-    }
-  },
-  second_hex: {
-    width: "100%",
-    height: "30%",
-    background: {
-      color: "white"
-    }
-  },
-  three_hex: {
-    width: "100%",
-    height: "30%",
-    background: {
-      color: "white"
-    }
-  },
-  four_hex: {
-    width: "100%",
-    height: "30%",
-    background: {
-      color: "white"
-    }
+    background: "#0f0"
   }
 };
 
