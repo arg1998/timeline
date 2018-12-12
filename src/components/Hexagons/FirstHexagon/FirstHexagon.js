@@ -22,7 +22,13 @@ const FirstHexagon = props => {
   const bh2 = beehiveStyles[2];
 
   return (
-    <svg viewBox="10 -80 720 700" width={width} height={height} style={style}>
+    <svg
+      viewBox="10 -80 720 700"
+      width={width}
+      height={height}
+      style={style}
+      // preserveAspectRatio="none"
+    >
       {/* main center hexagon */}
       <defs>
         <filter

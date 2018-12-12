@@ -22,7 +22,12 @@ const ThirdHexagon = props => {
   const bh2 = beehiveStyles[2];
 
   return (
-    <svg viewBox="90 70 730 400" width={width} height={height} style={style}>
+    <svg
+      viewBox="90 -10 650 650"
+      width={width}
+      height={height}
+      style={style}
+    >
       {/* beehive 0 */}
       <g
         stroke={bh0.strokeColor}
@@ -64,12 +69,8 @@ const ThirdHexagon = props => {
         filter="url(#third_hexagon_beehive_1)"
         vectorEffect="non-scaling-stroke"
       >
-        <path
-          d="M649.82 249.91l14.57-26.46h47.04l23.64 42.49-23.4 42.78h-47.03l-21.5-38.92m-7.39 7.64l17.32 31.13-23.4 42.79h-47.03L559 308.57l2.43-4.41m150.25 90.61h-47.04L641 352l23.4-42.49h47.03L735.07 352l-23.4 42.78z"
-        />
-        <path
-          d="M782.1 352.13h-47.03l-23.64-42.78 23.4-42.49h47.03l23.64 42.5-23.4 42.77z"
-        />
+        <path d="M649.82 249.91l14.57-26.46h47.04l23.64 42.49-23.4 42.78h-47.03l-21.5-38.92m-7.39 7.64l17.32 31.13-23.4 42.79h-47.03L559 308.57l2.43-4.41m150.25 90.61h-47.04L641 352l23.4-42.49h47.03L735.07 352l-23.4 42.78z" />
+        <path d="M782.1 352.13h-47.03l-23.64-42.78 23.4-42.49h47.03l23.64 42.5-23.4 42.77z" />
       </g>
       <defs>
         <filter
