@@ -7,7 +7,7 @@ class DesktopLayout extends Component {
     const { classes, children } = this.props;
     return (
       //FIXME: for shima: migrate this style on jss
-      <div style={{ height: "100%" }}>
+      <div className={classes.root_container}>
         <ParticleBackground />
         <div className={classes.container}>
           <div className={classes.left_side}>
