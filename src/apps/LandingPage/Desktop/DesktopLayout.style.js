@@ -3,9 +3,6 @@ import injectSheet from "react-jss";
 const containerStyle = {
   // total container
   container: {
-    background: {
-      color: "#fff"
-    },
     height: "100%",
     display: "flex",
     flexDirection: "row",
@@ -13,11 +10,11 @@ const containerStyle = {
   },
   //center Hexagon
   main_hex: {
-    width: "80%",
+    width: "70%",
     height: "100%",
-    background: {
-      color: "blue"
-    }
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
   },
   root_container: {
     height: "100%"
@@ -25,21 +22,20 @@ const containerStyle = {
   left_side: {
     display: "flex",
     flexDirection: "column",
-    width: "30%",
+    width: "15%",
     height: "100%",
-    justifyContent: "space-around"
+    justifyContent: "space-between"
   },
   right_side: {
     display: "flex",
     flexDirection: "column",
-    width: "30%",
+    width: "15%",
     height: "100%",
-    justifyContent: "space-around"
+    justifyContent: "space-between"
   },
   miniHexagons: {
     width: "100%",
-    height: "30%",
-    background: "#0f0"
+    height: "40%"
   }
 };
 
