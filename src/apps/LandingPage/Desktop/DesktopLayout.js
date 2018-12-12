@@ -6,7 +6,6 @@ class DesktopLayout extends Component {
   render() {
     const { classes, children } = this.props;
     return (
-      //FIXME: for shima: migrate this style on jss
       <div className={classes.root_container}>
         <ParticleBackground />
         <div className={classes.container}>
