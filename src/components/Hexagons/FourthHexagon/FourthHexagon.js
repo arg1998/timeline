@@ -1,5 +1,6 @@
 import React from "react";
 import pt from "prop-types";
+import SvgGaussianBlur from '../../SvgGaussianBlur/SvgGaussianBlur'
 
 const FourthHexagon = props => {
   // extracting needed variables from props
@@ -18,8 +19,7 @@ const FourthHexagon = props => {
   if (!beehiveStyles && beehiveStyles.length !== 2) {
     console.error("beehive styles for FirstHexagon is missing");
   }
-  const bh0 = beehiveStyles[0];
-  const bh1 = beehiveStyles[1];
+  const [bh0, bh1] = beehiveStyles;
 
   return (
     <svg
@@ -29,22 +29,7 @@ const FourthHexagon = props => {
       style={style}
     >
       {/* main center hexagon */}
-      <defs>
-        <filter
-          id="fourth_hexagon_main_center"
-          x="-200%"
-          y="-200%"
-          width="400%"
-          height="400%"
-          filterUnits="objectBoundingBox"
-          colorInterpolationFilters="sRGB"
-        >
-          <feGaussianBlur
-            xmlns="http://www.w3.org/2000/svg"
-            stdDeviation={mainHexagon.blurRadius}
-          />
-        </filter>
-      </defs>
+      <SvgGaussianBlur id="fourth_hexagon_main_center" blurRadius={mainHexagon.blurRadius} />
       <path
         stroke={mainHexagon.strokeColor}
         strokeWidth={mainHexagon.strokeWidth}
@@ -56,43 +41,7 @@ const FourthHexagon = props => {
       />
 
       {/* network lines */}
-      <defs>
-        <filter
-          id="fourth_hexagon_lines"
-          x="-200%"
-          y="-200%"
-          width="400%"
-          height="400%"
-          filterUnits="objectBoundingBox"
-          colorInterpolationFilters="sRGB"
-        >
-          <feGaussianBlur
-            xmlns="http://www.w3.org/2000/svg"
-            in="SourceGraphic"
-            stdDeviation={LLS.blurRadius}
-          />
-          <feOffset
-            xmlns="http://www.w3.org/2000/svg"
-            result="pf_100_offsetBlur"
-          />
-          <feFlood
-            xmlns="http://www.w3.org/2000/svg"
-            floodColor="#B3FF03"
-            floodOpacity={1}
-          />
-          <feComposite
-            xmlns="http://www.w3.org/2000/svg"
-            in2="pf_100_offsetBlur"
-            operator="in"
-            result="pf_100_dropShadow"
-          />
-          <feBlend
-            xmlns="http://www.w3.org/2000/svg"
-            in="SourceGraphic"
-            in2="pf_100_dropShadow"
-          />
-        </filter>
-      </defs>
+      <SvgGaussianBlur id="fourth_hexagon_lines" blurRadius={LLS.blurRadius} floodColor="B3FF03" floodOpacity={1} />
       <g
         stroke={LLS.strokeColor}
         strokeWidth={LLS.strokeWidth}
@@ -138,22 +87,7 @@ const FourthHexagon = props => {
       </g>
 
       {/* beehive 0 */}
-      <defs>
-        <filter
-          id="fourth_hexagon_beehive"
-          x="-200%"
-          y="-200%"
-          width="400%"
-          height="400%"
-          filterUnits="objectBoundingBox"
-          colorInterpolationFilters="sRGB"
-        >
-          <feGaussianBlur
-            xmlns="http://www.w3.org/2000/svg"
-            stdDeviation={bh0.blurRadius}
-          />
-        </filter>
-      </defs>
+      <SvgGaussianBlur id="fourth_hexagon_beehive" blurRadius={bh0.blurRadius} />
       <g
         stroke={bh0.strokeColor}
         strokeWidth={bh0.strokeWidth}

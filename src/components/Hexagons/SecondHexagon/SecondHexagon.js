@@ -1,5 +1,6 @@
 import React from "react";
 import pt from "prop-types";
+import SvgGaussianBlur from "../../SvgGaussianBlur/SvgGaussianBlur";
 
 const SecondHexagon = props => {
   // extracting needed variables from props
@@ -18,29 +19,20 @@ const SecondHexagon = props => {
   if (!beehiveStyles && beehiveStyles.length !== 3) {
     console.error("beehive styles for FirstHexagon is missing");
   }
-  const bh0 = beehiveStyles[0];
-  const bh1 = beehiveStyles[1];
-  const bh2 = beehiveStyles[2];
+  const [bh0, bh1, bh2] = beehiveStyles;
 
   return (
-    <svg viewBox="-28.9 -17.7 649.4 635.4" width={width} height={height} style={style}>
+    <svg
+      viewBox="-28.9 -17.7 649.4 635.4"
+      width={width}
+      height={height}
+      style={style}
+    >
       {/* main hexagon */}
-      <defs>
-        <filter
-          id="second_hexagon_main_hexagon"
-          width="400%"
-          height="400%"
-          x="-200%"
-          y="-200%"
-          colorInterpolationFilters="sRGB"
-          filterUnits="objectBoundingBox"
-        >
-          <feGaussianBlur
-            xmlns="http://www.w3.org/2000/svg"
-            stdDeviation={mainHexagon.blurRadius}
-          />
-        </filter>
-      </defs>
+      <SvgGaussianBlur
+        id="second_hexagon_main_hexagon"
+        blurRadius={mainHexagon.blurRadius}
+      />
       <path
         stroke={mainHexagon.strokeColor}
         strokeWidth={mainHexagon.strokeWidth}
@@ -52,22 +44,10 @@ const SecondHexagon = props => {
       />
 
       {/* beehive 0 */}
-      <defs>
-        <filter
-          id="second_hexagon_beehive_0"
-          width="400%"
-          height="400%"
-          x="-200%"
-          y="-200%"
-          colorInterpolationFilters="sRGB"
-          filterUnits="objectBoundingBox"
-        >
-          <feGaussianBlur
-            xmlns="http://www.w3.org/2000/svg"
-            stdDeviation={bh0.blurRadius}
-          />
-        </filter>
-      </defs>
+      <SvgGaussianBlur
+        id="second_hexagon_beehive_0"
+        blurRadius={bh0.blurRadius}
+      />
       <g
         stroke={bh0.strokeColor}
         strokeOpacity={bh0.strokeOpacity}
@@ -81,6 +61,10 @@ const SecondHexagon = props => {
       </g>
 
       {/* beehive 1 */}
+      <SvgGaussianBlur
+        id="second_hexagon_beehive_1"
+        blurRadius={bh1.blurRadius}
+      />
       <g
         stroke={bh1.strokeColor}
         strokeWidth={bh1.strokeWidth}
@@ -97,22 +81,6 @@ const SecondHexagon = props => {
         />
         <path d="M475.75 485.48L497 523.64l-21.24 38.16h-42.47l-21.23-38.16 21.23-38.16h42.47z" />
       </g>
-      <defs>
-        <filter
-          id="second_hexagon_beehive_1"
-          width="400%"
-          height="400%"
-          x="-200%"
-          y="-200%"
-          colorInterpolationFilters="sRGB"
-          filterUnits="objectBoundingBox"
-        >
-          <feGaussianBlur
-            xmlns="http://www.w3.org/2000/svg"
-            stdDeviation={bh1.blurRadius}
-          />
-        </filter>
-      </defs>
 
       {/* beehive 2 */}
       <g
@@ -126,62 +94,16 @@ const SecondHexagon = props => {
       >
         <path d="M141.41 279l21.24 38.16-21.24 38.16H98.94l-21.23-38.16L98.94 279h42.47zM63.7 238.3l21.24 38.15L63.7 314.6H21.23L0 276.45l21.23-38.16H63.7zm0 78.86l21.24 38.16-21.24 38.16H21.23L0 355.32l21.23-38.16H63.7z" />
       </g>
-      <defs>
-        <filter
-          id="second_hexagon_beehive_1"
-          width="400%"
-          height="400%"
-          x="-200%"
-          y="-200%"
-          colorInterpolationFilters="sRGB"
-          filterUnits="objectBoundingBox"
-        >
-          <feGaussianBlur
-            xmlns="http://www.w3.org/2000/svg"
-            stdDeviation={5.88}
-          />
-        </filter>
-      </defs>
 
       {/* earth */}
       <g opacity={earthStyle.fillOpacity} vectorEffect="non-scaling-stroke">
-        <defs>
-          <filter
-            id="second_hexagon_earth"
-            width="400%"
-            height="400%"
-            x="-200%"
-            y="-200%"
-            colorInterpolationFilters="sRGB"
-            filterUnits="objectBoundingBox"
-          >
-            <feGaussianBlur
-              xmlns="http://www.w3.org/2000/svg"
-              in="SourceGraphic"
-              stdDeviation={earthStyle.blurRadius}
-            />
-            <feOffset
-              xmlns="http://www.w3.org/2000/svg"
-              result="pf_100_offsetBlur"
-            />
-            <feFlood
-              xmlns="http://www.w3.org/2000/svg"
-              floodColor="#4FFFE7"
-              floodOpacity={1}
-            />
-            <feComposite
-              xmlns="http://www.w3.org/2000/svg"
-              in2="pf_100_offsetBlur"
-              operator="in"
-              result="pf_100_dropShadow"
-            />
-            <feBlend
-              xmlns="http://www.w3.org/2000/svg"
-              in="SourceGraphic"
-              in2="pf_100_dropShadow"
-            />
-          </filter>
-        </defs>
+        <SvgGaussianBlur
+          id="second_hexagon_earth"
+          blurRadius={earthStyle.blurRadius}
+          floodColor="#4FFFE7"
+          floodOpacity={1}
+        />
+
         <path
           fill={earthStyle.fillColor}
           stroke={earthStyle.strokeColor}
@@ -191,81 +113,14 @@ const SecondHexagon = props => {
           filter="url(#second_hexagon_earth)"
         />
       </g>
-      <defs>
-        <filter
-          id="prefix__f"
-          width="400%"
-          height="400%"
-          x="-200%"
-          y="-200%"
-          colorInterpolationFilters="sRGB"
-          filterUnits="objectBoundingBox"
-        >
-          <feGaussianBlur
-            xmlns="http://www.w3.org/2000/svg"
-            in="SourceGraphic"
-            stdDeviation={0.86}
-          />
-          <feOffset
-            xmlns="http://www.w3.org/2000/svg"
-            result="pf_100_offsetBlur"
-          />
-          <feFlood
-            xmlns="http://www.w3.org/2000/svg"
-            floodColor="#B3FF03"
-            floodOpacity={1}
-          />
-          <feComposite
-            xmlns="http://www.w3.org/2000/svg"
-            in2="pf_100_offsetBlur"
-            operator="in"
-            result="pf_100_dropShadow"
-          />
-          <feBlend
-            xmlns="http://www.w3.org/2000/svg"
-            in="SourceGraphic"
-            in2="pf_100_dropShadow"
-          />
-        </filter>
-      </defs>
 
-      <defs>
-        <filter
-          id="second_hexagon_WELS"
-          width="400%"
-          height="400%"
-          x="-200%"
-          y="-200%"
-          colorInterpolationFilters="sRGB"
-          filterUnits="objectBoundingBox"
-        >
-          <feGaussianBlur
-            xmlns="http://www.w3.org/2000/svg"
-            in="SourceGraphic"
-            stdDeviation={WELS.blurRadius}
-          />
-          <feOffset
-            xmlns="http://www.w3.org/2000/svg"
-            result="pf_100_offsetBlur"
-          />
-          <feFlood
-            xmlns="http://www.w3.org/2000/svg"
-            floodColor="#B3FF03"
-            floodOpacity={1}
-          />
-          <feComposite
-            xmlns="http://www.w3.org/2000/svg"
-            in2="pf_100_offsetBlur"
-            operator="in"
-            result="pf_100_dropShadow"
-          />
-          <feBlend
-            xmlns="http://www.w3.org/2000/svg"
-            in="SourceGraphic"
-            in2="pf_100_dropShadow"
-          />
-        </filter>
-      </defs>
+      {/* World Events Lines */}
+      <SvgGaussianBlur
+        id="second_hexagon_WELS"
+        blurRadius={WELS.blurRadius}
+        floodColor="#B3FF03"
+        floodOpacity={1}
+      />
 
       <g
         stroke={WELS.strokeColor}
@@ -278,52 +133,19 @@ const SecondHexagon = props => {
         <path d="M430.42 282.45h-98.79" />
         <path d="M421.18 245.76l-242.26-.04" />
         <path d="M434.53 401.39H236.75" />
-
         <path d="M445.48 341.92H424" />
-
         <path d="M440.74 372.12l-187.28-1.15" />
-
         <path d="M438.65 309.27H242.17" />
       </g>
 
       {/* rectangle */}
-      <defs>
-        <filter
-          id="second_hexagon_rectangle"
-          width="400%"
-          height="400%"
-          x="-200%"
-          y="-200%"
-          colorInterpolationFilters="sRGB"
-          filterUnits="objectBoundingBox"
-        >
-          <feGaussianBlur
-            xmlns="http://www.w3.org/2000/svg"
-            in="SourceGraphic"
-            stdDeviation={rectangleStyle.blurRadius}
-          />
-          <feOffset
-            xmlns="http://www.w3.org/2000/svg"
-            result="pf_100_offsetBlur"
-          />
-          <feFlood
-            xmlns="http://www.w3.org/2000/svg"
-            floodColor="#B3FF03"
-            floodOpacity={1}
-          />
-          <feComposite
-            xmlns="http://www.w3.org/2000/svg"
-            in2="pf_100_offsetBlur"
-            operator="in"
-            result="pf_100_dropShadow"
-          />
-          <feBlend
-            xmlns="http://www.w3.org/2000/svg"
-            in="SourceGraphic"
-            in2="pf_100_dropShadow"
-          />
-        </filter>
-      </defs>
+      <SvgGaussianBlur
+        id="second_hexagon_rectangle"
+        blurRadius={rectangleStyle.blurRadius}
+        floodColor="#B3FF03"
+        floodOpacity={1}
+      />
+
       <g
         stroke={rectangleStyle.strokeColor}
         strokeOpacity={rectangleStyle.strokeOpacity}

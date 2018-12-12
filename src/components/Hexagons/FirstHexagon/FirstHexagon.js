@@ -1,5 +1,6 @@
 import React from "react";
 import pt from "prop-types";
+import SvgGaussianBlur from "../../SvgGaussianBlur/SvgGaussianBlur";
 
 const FirstHexagon = props => {
   // extracting needed variables from props
@@ -17,9 +18,7 @@ const FirstHexagon = props => {
   if (!beehiveStyles && beehiveStyles.length !== 3) {
     console.error("beehive styles for FirstHexagon is missing");
   }
-  const bh0 = beehiveStyles[0];
-  const bh1 = beehiveStyles[1];
-  const bh2 = beehiveStyles[2];
+  const [bh0, bh1, bh2] = beehiveStyles;
 
   return (
     <svg
@@ -30,22 +29,10 @@ const FirstHexagon = props => {
       // preserveAspectRatio="none"
     >
       {/* main center hexagon */}
-      <defs>
-        <filter
-          id="first_hexagon_main_center"
-          x="-200%"
-          y="-200%"
-          width="400%"
-          height="400%"
-          filterUnits="objectBoundingBox"
-          colorInterpolationFilters="sRGB"
-        >
-          <feGaussianBlur
-            xmlns="http://www.w3.org/2000/svg"
-            stdDeviation={mainHexagon.blurRadius}
-          />
-        </filter>
-      </defs>
+      <SvgGaussianBlur
+        id="first_hexagon_main_center"
+        blurRadius={mainHexagon.blurRadius}
+      />
       <g
         filter="url(#first_hexagon_main_center)"
         vectorEffect="non-scaling-stroke"
@@ -61,22 +48,10 @@ const FirstHexagon = props => {
       </g>
 
       {/* linked lines */}
-      <defs>
-        <filter
-          id="first_hexagon_linked_lines"
-          width="400%"
-          height="400%"
-          x="-200%"
-          y="-200%"
-          colorInterpolationFilters="sRGB"
-          filterUnits="objectBoundingBox"
-        >
-          <feGaussianBlur
-            xmlns="http://www.w3.org/2000/svg"
-            stdDeviation={LLS.blurRadius}
-          />
-        </filter>
-      </defs>
+      <SvgGaussianBlur
+        id="first_hexagon_linked_lines"
+        blurRadius={LLS.blurRadius}
+      />
       <g
         // LLS : LinkedListStyle
         strokeWidth={LLS.strokeWidth}
@@ -114,22 +89,10 @@ const FirstHexagon = props => {
       </g>
 
       {/* beehive 0 */}
-      <defs>
-        <filter
-          id="first_hexagon_beehive_0"
-          x="-200%"
-          y="-200%"
-          width="400%"
-          height="400%"
-          filterUnits="objectBoundingBox"
-          colorInterpolationFilters="sRGB"
-        >
-          <feGaussianBlur
-            xmlns="http://www.w3.org/2000/svg"
-            stdDeviation={bh0.blurRadius}
-          />
-        </filter>
-      </defs>
+      <SvgGaussianBlur
+        id="first_hexagon_beehive_0"
+        blurRadius={bh0.blurRadius}
+      />
       <g
         // custom style from props
         stroke={bh0.strokeColor}
@@ -146,6 +109,10 @@ const FirstHexagon = props => {
       </g>
 
       {/* beehive 1 */}
+      <SvgGaussianBlur
+        id="first_hexagon_beehive_1"
+        blurRadius={bh1.blurRadius}
+      />
       <g
         //custom prop styles
         strokeOpacity={bh1.strokeOpacity}
@@ -161,25 +128,12 @@ const FirstHexagon = props => {
         <path d="M675.295 171.148h-47.036l-23.641-42.785 23.394-42.486h47.036l23.642 42.486-23.395 42.785z" />
         <path d="M675.295 85.771h-47.036l-23.641-42.784L628.012.5h47.036l23.642 42.487-23.395 42.784z" />
       </g>
-      <defs>
-        <filter
-          id="first_hexagon_beehive_1"
-          x="-200%"
-          y="-200%"
-          width="400%"
-          height="400%"
-          filterUnits="objectBoundingBox"
-          colorInterpolationFilters="sRGB"
-        >
-          <feGaussianBlur
-            stdDeviation={bh1.blurRadius}
-            xmlns="http://www.w3.org/2000/svg"
-            result="_out_8NHcuyQwcQ1CGQawprIyP1GsJCvIKlHc"
-          />
-        </filter>
-      </defs>
 
       {/* beehive 2 */}
+      <SvgGaussianBlur
+        id="first_hexagon_beehive_2"
+        blurRadius={bh2.blurRadius}
+      />
       <g
         // custom style from props
         stroke={bh2.strokeColor}
@@ -193,23 +147,6 @@ const FirstHexagon = props => {
         <path d="M534.554 618.042h-47.036l-23.641-42.785 23.394-42.486h47.036l23.642 42.486-23.395 42.785zM605.462 575.406h-47.036l-23.642-42.784 23.395-42.486h47.036l23.641 42.486-23.394 42.784z" />
         <path d="M529.605 519.271h-47.036l-23.641-42.784L482.322 434h47.036L553 476.487l-23.395 42.784z" />
       </g>
-      <defs>
-        <filter
-          id="first_hexagon_beehive_2"
-          x="-200%"
-          y="-200%"
-          width="400%"
-          height="400%"
-          filterUnits="objectBoundingBox"
-          colorInterpolationFilters="sRGB"
-        >
-          <feGaussianBlur
-            xmlns="http://www.w3.org/2000/svg"
-            stdDeviation={4}
-            result="_out_tlCJlb6WtIkqwJ7w79tsxMFXAkOiDntU"
-          />
-        </filter>
-      </defs>
     </svg>
   );
 };
