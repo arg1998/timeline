@@ -19,6 +19,9 @@ const containerStyle = {
       color: "blue"
     }
   },
+  root_container: {
+    height: "100%"
+  },
   left_side: {
     display: "flex",
     flexDirection: "column",
