@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import withSizes from "react-sizes";
 import ParticleBackground from "../../../components/ParticleBackground/ParticleBackground";
 import DesktopStyles from "./DesktopLayout.style";
 import FirstHexagon from "../../../components/Hexagons/FirstHexagon/FirstHexagon";
@@ -9,31 +10,33 @@ import AbstractHexagon from "../../../components/AbstractHexagon/AbstractHexagon
 
 class DesktopLayout extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, aspectRatio } = this.props;
+    if (aspectRatio < 1.5) {
+      return (
+        <p>
+          Aspect Ratio is not supported, current AR is {aspectRatio.toFixed(2)}{" "}
+          but to see the website you must provide a screen with bigger AR than
+          1.5
+        </p>
+      );
+    }
     return (
       <div className={classes.root_container}>
         <ParticleBackground />
 
-        <div className={classes.container}>
-          <div className={classes.left_side}>
-            <div className={classes.miniHexagons}>
-              <FourthHexagon width={250} height={250} />
-            </div>
-            <div className={classes.miniHexagons}>
-              <ThirdHexagon width={250} height={250} />
-            </div>
-          </div>
-          <div className={classes.main_hex}>
-            <AbstractHexagon width='75%' height='90%' />
+        <div className={classes.rootContainer}>
+          <div className={classes.sideBar}>
+            <ThirdHexagon width="25vh" height="25vh" />
+            <FourthHexagon width="25vh" height="25vh" />
           </div>
 
-          <div className={classes.right_side}>
-            <div className={classes.miniHexagons}>
-              <FirstHexagon width={250} height={250} />
-            </div>
-            <div className={classes.miniHexagons}>
-              <SecondHexagon width={250} height={250} />
-            </div>
+          <div>
+            <AbstractHexagon width="100vh" height="95vh" />
+          </div>
+
+          <div className={classes.sideBar}>
+            <FirstHexagon width="25vh" height="25vh" />
+            <SecondHexagon width="25vh" height="25vh" />
           </div>
         </div>
       </div>
@@ -41,4 +44,10 @@ class DesktopLayout extends Component {
   }
 }
 
-export default DesktopStyles(DesktopLayout);
+const mapScreenSizesToProps = ({ width, height }) => ({
+  width,
+  height,
+  aspectRatio: width / height
+});
+
+export default withSizes(mapScreenSizesToProps)(DesktopStyles(DesktopLayout));
