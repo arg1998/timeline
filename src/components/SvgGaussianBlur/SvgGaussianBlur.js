@@ -13,8 +13,8 @@ function SvgGaussianBlur(props) {
         />
         <feFlood
           xmlns="http://www.w3.org/2000/svg"
-          floodColor="#B3FF03"
-          floodOpacity={1}
+          floodColor={floodColor}
+          floodOpacity={floodOpacity}
         />
         <feComposite
           xmlns="http://www.w3.org/2000/svg"
