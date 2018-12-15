@@ -22,7 +22,7 @@ class DesktopLayout extends Component {
     }
     return (
       <div className={classes.root_container}>
-        <ParticleBackground />
+        <ParticleBackground count={100} />
 
         <div className={classes.rootContainer}>
           <div className={classes.sideBar}>
