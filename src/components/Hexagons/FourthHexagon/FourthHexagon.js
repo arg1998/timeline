@@ -1,10 +1,18 @@
 import React from "react";
 import pt from "prop-types";
-import SvgGaussianBlur from '../../SvgGaussianBlur/SvgGaussianBlur'
+import classNames from "classnames";
+import FourthHexagonStyles from "./FourthHexagon.style";
+import SvgGaussianBlur from "../../SvgGaussianBlur/SvgGaussianBlur";
+import AnimatedBeehive from "../../AnimatedComponents/AnimatedBeehive";
+import AnimatedPathFill from "../../AnimatedComponents/AnimatedPathFill";
+import AnimatedLineDrop from "../../AnimatedComponents/AnimatedLineDrop";
+import AnimatedGroupOpacity from "../../AnimatedComponents/AnimatedGroupOpacity";
 
 const FourthHexagon = props => {
   // extracting needed variables from props
   const {
+    active,
+    classes,
     width,
     height,
     style,
@@ -23,13 +31,19 @@ const FourthHexagon = props => {
 
   return (
     <svg
+      className={classNames({
+        [classes.hoverAnimation]: !active
+      })}
       viewBox="825.23 135.5 607.77 726.21"
       width={width}
       height={height}
       style={style}
     >
       {/* main center hexagon */}
-      <SvgGaussianBlur id="fourth_hexagon_main_center" blurRadius={mainHexagon.blurRadius} />
+      <SvgGaussianBlur
+        id="fourth_hexagon_main_center"
+        blurRadius={mainHexagon.blurRadius}
+      />
       <path
         stroke={mainHexagon.strokeColor}
         strokeWidth={mainHexagon.strokeWidth}
@@ -40,39 +54,49 @@ const FourthHexagon = props => {
         filter="url(#fourth_hexagon_main_center)"
       />
 
-      {/* network lines */}
-      <SvgGaussianBlur id="fourth_hexagon_lines" blurRadius={LLS.blurRadius} floodColor="B3FF03" floodOpacity={1} />
-      <g
-        stroke={LLS.strokeColor}
-        strokeWidth={LLS.strokeWidth}
-        strokeOpacity={LLS.strokeOpacity}
-        strokeDasharray={`${LLS.dashSize} ${LLS.dashGapSize}`}
-        strokeDashoffset={LLS.dashOffset}
-        vectorEffect="non-scaling-stroke"
-        strokeLinecap="square"
-        filter="url(#fourth_hexagon_lines)"
-      >
-        <path d="M1209.75 384.75l-91.5 146" />
-        <path d="M1118 531.25L993 564" />
-        <path d="M1210 384l-107.87 29" />
-        <path d="M1297 612l-178.75-81" />
-        <path d="M1357 395l-145.37-10.25" />
-        <path d="M1167.75 276l42.38 108.75" />
-        <path d="M1118.25 530.63l13.88 76.87" />
-      </g>
-
       {/* node circles */}
-      <g
+      <AnimatedGroupOpacity
+        pose={active ? "activated" : "deactivated"}
+        className={classes.network}
         fill={circlesStyle.fillColor}
         fillOpacity={circlesStyle.fillOpacity}
         vectorEffect="non-scaling-stroke"
       >
+        {/* network lines */}
+        <SvgGaussianBlur
+          id="fourth_hexagon_lines"
+          blurRadius={LLS.blurRadius}
+          floodColor="B3FF03"
+          floodOpacity={1}
+        />
+        <AnimatedLineDrop
+          pose={active ? "activated" : "deactivated"}
+          stroke={LLS.strokeColor}
+          strokeWidth={LLS.strokeWidth}
+          strokeDasharray={`${LLS.dashSize} ${LLS.dashGapSize}`}
+          strokeDashoffset={LLS.dashOffset}
+          vectorEffect="non-scaling-stroke"
+          strokeLinecap="square"
+          filter="url(#fourth_hexagon_lines)"
+        >
+          <path d="M1209.75 384.75l-91.5 146" />
+          <path d="M1118 531.25L993 564" />
+          <path d="M1210 384l-107.87 29" />
+          <path d="M1297 612l-178.75-81" />
+          <path d="M1357 395l-145.37-10.25" />
+          <path d="M1167.75 276l42.38 108.75" />
+          <path d="M1118.25 530.63l13.88 76.87" />
+        </AnimatedLineDrop>
+
         <circle cx={1118.3} cy={530.3} r={circlesStyle.radius} />
         <circle cx={1210.14} cy={383.67} r={circlesStyle.radius} />
-      </g>
+      </AnimatedGroupOpacity>
 
       {/* humans */}
-      <g
+      <AnimatedPathFill
+        pose={active ? "activated" : "deactivated"}
+        pathSize={300}
+        className={classes.humans}
         stroke={humanStyles.strokeColor}
         strokeWidth={humanStyles.strokeWidth}
         strokeOpacity={humanStyles.strokeOpacity}
@@ -84,11 +108,16 @@ const FourthHexagon = props => {
         <path d="M1180.88 171.12h6.77l13.19 46.67-12.97 56.21h-40.63L1133 217.79l12.52-46.67h7.28m-72.17 195.33h6.77l13.18 46.67-12.96 56.21H1047l-14.24-56.2 12.52-46.68h7.28m294.16 199.67h6.77l13.18 46.67-12.96 56.21h-40.63l-14.24-56.21 12.51-46.67h7.29m-347.76-48h6.77l13.19 46.67L977.87 621h-40.63L923 564.79l12.52-46.67h7.28m464.25-170.34h6.77l13.18 46.68-12.96 56.2h-40.63l-14.25-56.2 12.52-46.68h7.28m-231.99 292.34h6.76l13.19 46.67-12.97 56.21h-40.63l-14.24-56.21 12.52-46.67h7.28" />
         {/* heads */}
         <path d="M1175.87 179.15h-18.31l-9.21-19.65 9.11-19.5h18.32l9.2 19.5-9.1 19.65zm-100.25 195.33h-18.32l-9.2-19.64 9.1-19.5h18.33l9.2 19.5-9.1 19.64zm266.09 199.67h-18.32l-9.2-19.64 9.1-19.51h18.33l9.2 19.5-9.1 19.65zm-375.84-48h-18.31l-9.21-19.64 9.11-19.51h18.32l9.2 19.5-9.1 19.65zm436.17-170.34h-18.32l-9.2-19.64 9.1-19.5h18.32l9.2 19.5-9.1 19.64zm-260.08 292.34h-18.32l-9.2-19.64 9.1-19.51h18.32l9.2 19.5-9.1 19.65z" />
-      </g>
+      </AnimatedPathFill>
 
       {/* beehive 0 */}
-      <SvgGaussianBlur id="fourth_hexagon_beehive" blurRadius={bh0.blurRadius} />
-      <g
+      <SvgGaussianBlur
+        id="fourth_hexagon_beehive"
+        blurRadius={bh0.blurRadius}
+      />
+      <AnimatedBeehive
+        pose={active ? "activated" : "deactivated"}
+        strokeDasharray={300}
         stroke={bh0.strokeColor}
         strokeWidth={bh0.strokeWidth}
         strokeOpacity={bh0.stopOpacity}
@@ -98,10 +127,12 @@ const FourthHexagon = props => {
         vectorEffect="non-scaling-stroke"
       >
         <path d="M967.6 352.27h-47.03l-23.64-42.78 23.4-42.49h47.03L991 309.49l-23.4 42.78zm-51 89.73h-47.03l-23.64-42.78 23.4-42.5h47.03l23.64 42.5L916.6 442zm86.08 45.07h-47.04L932 444.3l23.4-42.49h47.03l23.64 42.49-23.4 42.78z" />
-      </g>
+      </AnimatedBeehive>
 
       {/* beehive 1 */}
-      <g
+      <AnimatedBeehive
+        pose={active ? "activated" : "deactivated"}
+        strokeDasharray={300}
         stroke={bh1.strokeColor}
         strokeWidth={bh1.strokeWidth}
         strokeOpacity={bh1.stopOpacity}
@@ -114,7 +145,7 @@ const FourthHexagon = props => {
         <path d="M1321.6 809.27h-47.03l-23.64-42.78 23.4-42.49h47.03l23.64 42.49-23.4 42.78z" />
         <path d="M1249.01 851.9h-47.04l-23.64-42.78 23.4-42.49h47.03l23.64 42.5-23.39 42.78z" />
         <path d="M1392.28 851.9h-47.03l-23.64-42.78 23.39-42.49h47.04l23.64 42.5-23.4 42.78z" />
-      </g>
+      </AnimatedBeehive>
     </svg>
   );
 };
@@ -175,4 +206,4 @@ FourthHexagon.defaultProps = {
     strokeOpacity: 0.6
   }
 };
-export default FourthHexagon;
+export default FourthHexagonStyles(FourthHexagon);
