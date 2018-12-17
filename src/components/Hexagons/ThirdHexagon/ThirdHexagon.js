@@ -1,10 +1,17 @@
 import React from "react";
 import pt from "prop-types";
+import classNames from "classnames";
+import ThirdHexagonStyles from "./ThirdHexagon.style";
 import SvgGaussianBlur from "../../SvgGaussianBlur/SvgGaussianBlur";
+import AnimatedBeehive from "../../AnimatedComponents/AnimatedBeehive";
+import AnimatedPathFill from "../../AnimatedComponents/AnimatedPathFill";
+import AnimatedGroupOpacity from "../../AnimatedComponents/AnimatedGroupOpacity";
 
 const ThirdHexagon = props => {
   // extracting needed variables from props
   const {
+    active,
+    classes,
     width,
     height,
     style,
@@ -21,13 +28,23 @@ const ThirdHexagon = props => {
   const [bh0, bh1, bh2] = beehiveStyles;
 
   return (
-    <svg viewBox="90 -10 650 650" width={width} height={height} style={style}>
+    <svg
+      className={classNames({
+        [classes.hoverAnimation]: !active
+      })}
+      viewBox="100 -10 710 650"
+      width={width}
+      height={height}
+      style={style}
+    >
       {/* beehive 0 */}
       <SvgGaussianBlur
         id="third_hexagon_beehive_0"
         blurRadius={bh0.blurRadius}
       />
-      <g
+      <AnimatedBeehive
+        pose={active ? "activated" : "deactivated"}
+        strokeDasharray={300}
         stroke={bh0.strokeColor}
         strokeWidth={bh0.strokeWidth}
         opacity={bh0.strokeOpacity}
@@ -39,14 +56,16 @@ const ThirdHexagon = props => {
         <path d="M328.1 81.36h-47.03l-23.64-42.78 23.4-42.49h47.03l23.64 42.5-23.4 42.77z" />
         <path d="M257.68 124h-47.04L187 81.22l23.4-42.5h47.03l23.64 42.5-23.4 42.78zm75 52.27h-47.04L262 133.5 285.4 91h47.03l23.64 42.49-23.4 42.78z" />
         <path d="M187.25 81.36H140.2l-23.64-42.78 23.4-42.49H187l23.64 42.5-23.4 42.77z" />
-      </g>
+      </AnimatedBeehive>
 
       {/* beehive 1 */}
       <SvgGaussianBlur
         id="third_hexagon_beehive_1"
         blurRadius={bh1.blurRadius}
       />
-      <g
+      <AnimatedBeehive
+        pose={active ? "activated" : "deactivated"}
+        strokeDasharray={300}
         stroke={bh1.strokeColor}
         strokeWidth={bh1.strokeWidth}
         opacity={bh1.strokeOpacity}
@@ -57,14 +76,16 @@ const ThirdHexagon = props => {
       >
         <path d="M649.82 249.91l14.57-26.46h47.04l23.64 42.49-23.4 42.78h-47.03l-21.5-38.92m-7.39 7.64l17.32 31.13-23.4 42.79h-47.03L559 308.57l2.43-4.41m150.25 90.61h-47.04L641 352l23.4-42.49h47.03L735.07 352l-23.4 42.78z" />
         <path d="M782.1 352.13h-47.03l-23.64-42.78 23.4-42.49h47.03l23.64 42.5-23.4 42.77z" />
-      </g>
+      </AnimatedBeehive>
 
       {/* beehive 2 */}
       <SvgGaussianBlur
         id="third_hexagon_beehive_2"
         blurRadius={bh2.blurRadius}
       />
-      <g
+      <AnimatedBeehive
+        pose={active ? "activated" : "deactivated"}
+        strokeDasharray={300}
         stroke={bh2.strokeColor}
         strokeWidth={bh2.strokeWidth}
         opacity={bh2.strokeOpacity}
@@ -74,7 +95,7 @@ const ThirdHexagon = props => {
       >
         <path d="M223.5 433.22l9.46 17-23.4 42.78h-47.03l-23.64-42.78 19.25-34.95M256.6 578.27h-47.03l-23.64-42.78 23.4-42.49h47.03L280 535.49l-23.4 42.78z" />
         <path d="M327.28 620.9h-47.03l-23.64-42.78L280 535.63h47.04l23.64 42.5-23.4 42.78z" />
-      </g>
+      </AnimatedBeehive>
 
       {/* Main Hexagon */}
       <SvgGaussianBlur
@@ -96,7 +117,7 @@ const ThirdHexagon = props => {
         <path d="M533.34 532H284.66L232 438" />
       </g>
 
-      {/* Lines */}
+      {/*lines and  rectangles */}
       <SvgGaussianBlur
         id="third_hexagon_lines_and_rectangles"
         blurRadius={timeLineStyle.blurRadius}
@@ -104,8 +125,10 @@ const ThirdHexagon = props => {
         floodOpacity={0.7}
       />
 
-      {/* rectangles */}
-      <g
+      <AnimatedPathFill
+        pose={active ? "activated" : "deactivated"}
+        pathSize={400}
+        className={classes.lines}
         stroke={timeLineStyle.strokeColor}
         strokeOpacity={timeLineStyle.strokeOpacity}
         strokeWidth={timeLineStyle.strokeWidth}
@@ -126,10 +149,13 @@ const ThirdHexagon = props => {
         <path d="M535.88 475H662l-50.27 54H486.5l49.38-54z" />
         <path d="M251.61 379H125.5l50.27 54H301l-49.39-54z" />
         <path d="M251.61 122.27H125.5l50.27 54H301l-49.39-54z" />
-      </g>
+      </AnimatedPathFill>
 
       {/* human */}
-      <g
+      <AnimatedGroupOpacity
+        pose={active ? "activated" : "deactivated"}
+        endOpacity={0.5}
+        className={classes.human}
         stroke={humanStyle.strokeColor}
         strokeWidth={humanStyle.strokeWidth}
         strokeOpacity={humanStyle.strokeOpacity}
@@ -141,17 +167,15 @@ const ThirdHexagon = props => {
         <path
           stroke={humanStyle.mouthColor}
           strokeWidth={humanStyle.mouthWidth}
-          strokeOpacity={humanStyle.mouthOpacity}
           d="M336.47 238l5.06 6h18.3l5.06-6"
         />
         <path d="M383 246h15.66l30.52 108-30 82h-94.04l-32.96-82 28.96-108H318" />
         <path
           fill={humanStyle.eyeColor}
-          fillOpacity={humanStyle.eyeOpacity}
           stroke="none"
           d="M371.72 209.4h-6.58l-3.31-5.86 3.27-5.82h6.59l3.31 5.82-3.28 5.85zm-33.47 0h-6.58l-3.32-5.86 3.28-5.82h6.59l3.3 5.82-3.27 5.85z"
         />
-      </g>
+      </AnimatedGroupOpacity>
     </svg>
   );
 };
@@ -220,4 +244,4 @@ ThirdHexagon.defaultProps = {
   }
 };
 
-export default ThirdHexagon;
+export default ThirdHexagonStyles(ThirdHexagon);
