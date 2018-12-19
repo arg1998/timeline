@@ -24,6 +24,7 @@ class DesktopLayout extends Component {
   render() {
     const { classes, aspectRatio } = this.props;
     const { activeIndex } = this.state;
+
     if (aspectRatio < 1.5) {
       return (
         <p>
@@ -35,45 +36,61 @@ class DesktopLayout extends Component {
     }
 
     return (
-      <div className={classes.root_container}>
+      <div>
         <ParticleBackground count={100} />
+        <div className={classes.navBar}>
+          <img
+            alt=""
+            className={classes.leftNavImage}
+            src={require("../../../res/images/hamburger.png")}
+          />
+          <img
+            alt=""
+            className={classes.rightNavImage}
+            src={require("../../../res/images/hamburger.png")}
+          />
 
-        <div className={classes.rootContainer}>
-          <div className={classes.sideBar}>
-            <div style={{ width: "25vh", height: "25vh" }}>
-              <FourthHexagon
+          <div className={classes.rootContainer}>
+            <div className={classes.sideBar}>
+              <div style={{ width: "25vh", height: "25vh" }}>
+                <FourthHexagon
+                  width="100%"
+                  height="100%"
+                  active={activeIndex === 3}
+                />
+              </div>
+              <div style={{ width: "25vh", height: "25vh" }}>
+                <ThirdHexagon
+                  width="100%"
+                  height="100%"
+                  active={activeIndex === 2}
+                />
+              </div>
+            </div>
+
+            <div style={{ width: "100vh", height: "95vh" }}>
+              <AbstractHexagon
                 width="100%"
                 height="100%"
-                active={activeIndex === 3}
+                activeIndex={activeIndex}
               />
             </div>
-            <div style={{ width: "25vh", height: "25vh" }}>
-              <ThirdHexagon
-                width="100%"
-                height="100%"
-                active={activeIndex === 2}
-              />
-            </div>
-          </div>
 
-          <div style={{ width: "100vh", height: "95vh" }}>
-            <AbstractHexagon width="100%" height="100%" activeIndex={activeIndex} />
-          </div>
-
-          <div className={classes.sideBar}>
-            <div style={{ width: "25vh", height: "25vh" }}>
-              <FirstHexagon
-                width="100%"
-                height="100%"
-                active={activeIndex === 0}
-              />
-            </div>
-            <div style={{ width: "25vh", height: "25vh" }}>
-              <SecondHexagon
-                width="100%"
-                height="100%"
-                active={activeIndex === 1}
-              />
+            <div className={classes.sideBar}>
+              <div style={{ width: "25vh", height: "25vh" }}>
+                <FirstHexagon
+                  width="100%"
+                  height="100%"
+                  active={activeIndex === 0}
+                />
+              </div>
+              <div style={{ width: "25vh", height: "25vh" }}>
+                <SecondHexagon
+                  width="100%"
+                  height="100%"
+                  active={activeIndex === 1}
+                />
+              </div>
             </div>
           </div>
         </div>
