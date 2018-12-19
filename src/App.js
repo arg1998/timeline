@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import withSizes from "react-sizes";
 import DesktopLayout from "./apps/LandingPage/Desktop/DesktopLayout";
 import bp from "./utils/BreakPoints";
+import MobileLayout from "./apps/LandingPage/Mobile/MobileLayout";
 
 class App extends Component {
   render() {
@@ -10,6 +11,8 @@ class App extends Component {
     let layout = <p>unsupported layout !!!</p>;
     if (isDesktop) {
       layout = <DesktopLayout />;
+    } else {
+      layout = <MobileLayout />;
     }
 
     return layout;
