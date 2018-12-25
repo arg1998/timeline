@@ -6,7 +6,7 @@ class ParticleBackground extends React.Component {
     return false;
   }
   render() {
-    let { style, count } = this.props;
+    let { style, count , touch } = this.props;
 
     if (!style) {
       style = {
@@ -96,7 +96,7 @@ class ParticleBackground extends React.Component {
             detect_on: "window",
             events: {
               onhover: {
-                enable: true,
+                enable: touch,
                 mode: "grab"
               },
               onclick: {
