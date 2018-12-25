@@ -3,13 +3,11 @@ import injectStyleSheet from "react-jss";
 const styles = {
   "@keyframes firstHexagonContentTitleAnimation": {
     from: {
-      top: 30,
       opacity: 0
     },
     to: {
-      top: 0,
       opacity: 1,
-      transform: "translateY(0)"
+      transform: ["translateY(0)", "translateX(0)"]
     }
   },
   title: {

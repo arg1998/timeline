@@ -8,6 +8,7 @@ const FirstHexagonContent = props => {
 
   return (
     <>
+    {/* Content Background */}
       <path
         fill="#000"
         fillOpacity={0.6}
@@ -51,6 +52,7 @@ const FirstHexagonContent = props => {
         </g>
       </g>
 
+{/* title */}
       <g
         className={classNames({ [classes.title]: active })}
         fontFamily="Philosopher"

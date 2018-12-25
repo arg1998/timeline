@@ -1,5 +1,9 @@
 import React from "react";
 import FirstHexagonContent from "../AbstractHexagonContents/FirstHexagonContent/FirstHexagonContent";
+import SecondHexagonContent from "../AbstractHexagonContents/SecondHexagonContent/SecondHexagonContent";
+import ThirdHexagonContent from "../AbstractHexagonContents/ThirdHexagonContent/ThirdHexagonContent";
+import FourthHexagonContent from "../AbstractHexagonContents/FourthHexagonContent/FourthHexagonContent";
+import EmptyContent from "../AbstractHexagonContents/EmptyContent/EmptyContent";
 
 const SvgLinearGradient = props => {
   const { id, beginColor, stopColor } = props;
@@ -22,6 +26,28 @@ const SvgLinearGradient = props => {
 
 const AbstractHexagon = props => {
   const { width, height, style, activeIndex } = props;
+  let Content = null;
+  switch (activeIndex) {
+    case -1:
+      Content = <EmptyContent />;
+      break;
+    case 0:
+      Content = <FirstHexagonContent active />;
+      break;
+    case 1:
+      Content = <SecondHexagonContent active />;
+      break;
+    case 2:
+      Content = <ThirdHexagonContent active />;
+      break;
+    case 3:
+      Content = <FourthHexagonContent active />;
+      break;
+    default:
+      Content = null;
+      break;
+  }
+
   return (
     <svg
       viewBox="0 0 900 900"
@@ -31,8 +57,7 @@ const AbstractHexagon = props => {
       style={style}
     >
       {/* content */}
-
-      <FirstHexagonContent active={activeIndex === 0} />
+      {Content}
 
       {/* hexagon ring 0 */}
       <clipPath id="hex_ring_path_0">
