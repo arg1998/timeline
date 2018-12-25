@@ -9,18 +9,11 @@ import SecondHexagon from "../../../components/Hexagons/SecondHexagon/SecondHexa
 import AbstractHexagon from "../../../components/AbstractHexagon/AbstractHexagon";
 
 class DesktopLayout extends Component {
-  state = { activeIndex: 0 };
+  state = { activeIndex: -1 };
 
-  componentDidMount() {
-    this.interval = setInterval(() => {
-      this.setState((prevState, newProps) => ({
-        activeIndex: (prevState.activeIndex + 1) % 4
-      }));
-    }, 3000);
-  }
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
+  _miniHexagonClickHandler = index => {
+    this.setState({ activeIndex: index });
+  };
   render() {
     const { classes, aspectRatio } = this.props;
     const { activeIndex } = this.state;
@@ -37,7 +30,7 @@ class DesktopLayout extends Component {
 
     return (
       <div>
-        <ParticleBackground count={100} />
+        <ParticleBackground count={100} touch={true} />
         <div className={classes.navBar}>
           <img
             alt=""
@@ -57,6 +50,7 @@ class DesktopLayout extends Component {
                   width="100%"
                   height="100%"
                   active={activeIndex === 3}
+                  onClick={() => this._miniHexagonClickHandler(3)}
                 />
               </div>
               <div style={{ width: "25vh", height: "25vh" }}>
@@ -64,6 +58,7 @@ class DesktopLayout extends Component {
                   width="100%"
                   height="100%"
                   active={activeIndex === 2}
+                  onClick={() => this._miniHexagonClickHandler(2)}
                 />
               </div>
             </div>
@@ -82,6 +77,7 @@ class DesktopLayout extends Component {
                   width="100%"
                   height="100%"
                   active={activeIndex === 0}
+                  onClick={() => this._miniHexagonClickHandler(0)}
                 />
               </div>
               <div style={{ width: "25vh", height: "25vh" }}>
@@ -89,6 +85,7 @@ class DesktopLayout extends Component {
                   width="100%"
                   height="100%"
                   active={activeIndex === 1}
+                  onClick={() => this._miniHexagonClickHandler(1)}
                 />
               </div>
             </div>
