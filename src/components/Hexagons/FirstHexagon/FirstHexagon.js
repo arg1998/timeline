@@ -18,7 +18,8 @@ const FirstHexagon = props => {
     mainHexagon,
     beehiveStyles,
     linkedLinesStyles: LLS,
-    miniHexagonsStyles
+    miniHexagonsStyles,
+    onClick
   } = props;
 
   // getting beehives styles from props
@@ -37,6 +38,7 @@ const FirstHexagon = props => {
       width={width}
       height={height}
       style={style}
+      onClick={onClick}
     >
       {/* main center hexagon */}
       <SvgGaussianBlur
