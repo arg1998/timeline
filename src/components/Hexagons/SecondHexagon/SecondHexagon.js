@@ -19,7 +19,8 @@ const SecondHexagon = props => {
     beehiveStyles,
     earthStyle,
     worldEventsLineStyle: WELS,
-    rectangleStyle
+    rectangleStyle,
+    onClick
   } = props;
 
   // getting beehives styles from props
@@ -29,11 +30,12 @@ const SecondHexagon = props => {
   const [bh0, bh1, bh2] = beehiveStyles;
 
   return (
-    <svg
+    <svg 
       viewBox="-28.9 -17.7 649.4 635.4"
       width={width}
       height={height}
       style={style}
+      onClick={onClick}
       className={classNames({
         [classes.hoverAnimation]: !active,
         [classes.transitions]: !active

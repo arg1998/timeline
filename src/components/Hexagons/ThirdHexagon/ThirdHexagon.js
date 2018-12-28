@@ -18,7 +18,8 @@ const ThirdHexagon = props => {
     mainHexagon,
     beehiveStyles,
     timeLineStyle,
-    humanStyle
+    humanStyle,
+    onClick
   } = props;
 
   // getting beehives styles from props
@@ -36,6 +37,7 @@ const ThirdHexagon = props => {
       width={width}
       height={height}
       style={style}
+      onClick={onClick}
     >
       {/* beehive 0 */}
       <SvgGaussianBlur

@@ -8,26 +8,16 @@ import ThirdHexagon from "../../../components/Hexagons/ThirdHexagon/ThirdHexagon
 import SecondHexagon from "../../../components/Hexagons/SecondHexagon/SecondHexagon";
 import AbstractHexagon from "../../../components/AbstractHexagon/AbstractHexagon";
 
-function rand(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
 class DesktopLayout extends Component {
   state = { activeIndex: -1 };
 
-  componentDidMount() {
-    this.interval = setInterval(() => {
-      this.setState((prevState, newProps) => ({
-        activeIndex: (prevState.activeIndex + 1) % 4
-      }));
-    }, 3000);
-  }
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
+  _miniHexagonClickHandler = index => {
+    this.setState({ activeIndex: index });
+  };
   render() {
     const { classes, aspectRatio } = this.props;
     const { activeIndex } = this.state;
+
     if (aspectRatio < 1.5) {
       return (
         <p>
@@ -40,37 +30,45 @@ class DesktopLayout extends Component {
 
     return (
       <div>
-        <ParticleBackground count={100} />
+        <ParticleBackground count={100} touch={true} />
         <div className={classes.navBar}>
-            <img
-              className={classes.leftNavImage}
-              src={require("../../../res/images/hamburger.png")}
-            />
-            <img 
-              className={classes.rightNavImage}
-              src={require("../../../res/images/hamburger.png")}
-            />
-            
+          <img
+            alt=""
+            className={classes.leftNavImage}
+            src={require("../../../res/images/hamburger.png")}
+          />
+          <img
+            alt=""
+            className={classes.rightNavImage}
+            src={require("../../../res/images/hamburger.png")}
+          />
+
           <div className={classes.rootContainer}>
             <div className={classes.sideBar}>
               <div style={{ width: "25vh", height: "25vh" }}>
                 <FourthHexagon
                   width="100%"
                   height="100%"
-                  active={activeIndex == 3}
+                  active={activeIndex === 3}
+                  onClick={() => this._miniHexagonClickHandler(3)}
                 />
               </div>
               <div style={{ width: "25vh", height: "25vh" }}>
                 <ThirdHexagon
                   width="100%"
                   height="100%"
-                  active={activeIndex == 2}
+                  active={activeIndex === 2}
+                  onClick={() => this._miniHexagonClickHandler(2)}
                 />
               </div>
             </div>
 
             <div style={{ width: "100vh", height: "95vh" }}>
-              <AbstractHexagon width="100%" height="100%" />
+              <AbstractHexagon
+                width="100%"
+                height="100%"
+                activeIndex={activeIndex}
+              />
             </div>
 
             <div className={classes.sideBar}>
@@ -78,14 +76,16 @@ class DesktopLayout extends Component {
                 <FirstHexagon
                   width="100%"
                   height="100%"
-                  active={activeIndex == 0}
+                  active={activeIndex === 0}
+                  onClick={() => this._miniHexagonClickHandler(0)}
                 />
               </div>
               <div style={{ width: "25vh", height: "25vh" }}>
                 <SecondHexagon
                   width="100%"
                   height="100%"
-                  active={activeIndex == 1}
+                  active={activeIndex === 1}
+                  onClick={() => this._miniHexagonClickHandler(1)}
                 />
               </div>
             </div>
