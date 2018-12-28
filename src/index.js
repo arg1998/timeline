@@ -9,7 +9,7 @@ import store from "./redux/store";
 
 const SPA = (
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <App />
     </BrowserRouter>
   </Provider>
