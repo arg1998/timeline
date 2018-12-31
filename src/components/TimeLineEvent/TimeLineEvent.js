@@ -1,24 +1,48 @@
 import React from "react";
-import TimeLineEventStyles from "./TimeLineEventLayout.style";
-import classNames from 'classnames';
+import pt from "prop-types";
+import TimeLineEventStyles from "./TimeLineEvent.style";
+import Event from "./Event/Event";
+import BarIconHexagon from "../BarIconHexagon/BarIconHexagon";
+import Fade from "react-reveal/Fade";
 
 function TimeLineEvent(props) {
-  const { eventData, classes, index } = props;
-  const isRight = index % 2 === 0;
+  const { classes, index, isDesktop, eventData } = props;
+  let side = "right";
+
+  if (isDesktop) {
+    side = index % 2 === 0 ? "right" : "left";
+  }
+
   return (
-    <div>
-      <li className={classes.eventRow}>
+    <li className={classes.eventRow}>
+      {/* cross icon */}
+      <div className={classes.barIcon}>
+        <BarIconHexagon />
+      </div>
+      <Fade up>
         <div
-          className={classNames({
-            [classes.rightStyle]: isRight,
-            [classes.leftStyle]: !isRight
-          })}
+          style={{
+            width: "100%",
+            marginTop: 80,
+            position: "relative",
+            display: "flex",
+            flexDirection: "row"
+          }}
         >
-          <p>{eventData.describtion}</p>
+          <Event side={side} {...eventData} isDesktop={isDesktop} />
         </div>
-      </li>
-    </div>
+      </Fade>
+    </li>
   );
 }
+
+TimeLineEvent.propTypes = {
+  index: pt.number.isRequired,
+  data: pt.object,
+  barIconSize: pt.number
+};
+TimeLineEvent.defaultProps = {
+  barIconSize: 64
+};
 
 export default TimeLineEventStyles(TimeLineEvent);
