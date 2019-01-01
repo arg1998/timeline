@@ -32,7 +32,7 @@ const styles = {
   eventBox: ({ isDesktop }) => ({
     width: "100%",
     borderRadius: "5px 5px 0 0 ",
-    minHeight: isDesktop?  180 : 120,
+    minHeight: isDesktop ? 180 : 120,
     maxHeight: 350,
     overflow: "hidden",
     padding: 10,
@@ -50,7 +50,22 @@ const styles = {
     height: isDesktop ? 140 : 70,
     float: "left",
     marginRight: 10
-  })
+  }),
+  eventOptions: ({ isDesktop }) => ({
+    height: isDesktop ? 64 : 32,
+    display: "flex",
+    flexDirection: isDesktop ? "row" : "row-reverse",
+    justifyContent: "space-between",
+    paddingTop: 5,
+    position: "absolute",
+    top: "100%"
+  }),
+  right: {
+    right: 0
+  },
+  left: {
+    left: 0
+  }
 };
 
 export default component => injectSheet(styles)(component);

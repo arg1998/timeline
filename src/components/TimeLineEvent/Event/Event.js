@@ -1,7 +1,8 @@
 import React from "react";
 import pt from "prop-types";
-import Fade from "react-reveal/Fade";
+import classNames from "classnames";
 import EventStyles from "./Event.style";
+import EventOption from "../EventOption/EventOption";
 
 function Event(props) {
   const {
@@ -31,20 +32,32 @@ function Event(props) {
       {/* RIGHT SIDE => empty space gap between vertical bar and event content*/}
       {rightSideGap}
 
-      {/* actual container to hold the event data (images, text, title and ...) */}
       <div className={classes.contentContainer}>
+        {/* actual container to hold the event data (images, text, title and ...) */}
         <div className={classes.eventBox}>
           <h2 className={classes.eventTitle}>{title}</h2>
           <div>
             <img
               alt=""
               className={classes.eventImage}
-              src={require("../../../res/images/reactbanner.png")}
+              src={"/img/reactbanner.png"}
             />
             <p style={{ display: "inline", fontFamily: "Philosopher" }}>
               {description}
             </p>
           </div>
+        </div>
+        {/* event options bellow the event box */}
+        <div
+          className={classNames({
+            [classes.eventOptions]: true,
+            [classes.right]: isRight,
+            [classes.left]: !isRight,
+
+          })}
+        >
+          <EventOption type="info" />
+          <EventOption type="link" />
         </div>
       </div>
 
