@@ -2,8 +2,9 @@ import injectSheet from "react-jss";
 
 const styles = {
   eventRow: {
+    userSelect: "none", 
     width: "100%",
-    marginTop: 80,
+    marginBottom: 60,
     position: "relative",
     display: "flex",
     flexDirection: "row"

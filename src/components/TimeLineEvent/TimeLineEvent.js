@@ -19,7 +19,7 @@ function TimeLineEvent(props) {
       <div className={classes.barIcon}>
         <BarIconHexagon />
       </div>
-      <Fade up>
+      <Fade >
         <div
           style={{
             width: "100%",
