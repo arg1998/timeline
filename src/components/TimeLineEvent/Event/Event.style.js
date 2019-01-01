@@ -13,7 +13,7 @@ const styles = {
   horizontalBar: ({ horizontalBarSize }) => ({
     width: "100%",
     height: horizontalBarSize,
-    backgroundColor: "#fff",
+    backgroundColor: "#14568c",
     position: "absolute",
     bottom: -(horizontalBarSize / 2)
   }),
@@ -32,17 +32,17 @@ const styles = {
   eventBox: ({ isDesktop }) => ({
     width: "100%",
     borderRadius: "5px 5px 0 0 ",
-    minHeight: isDesktop?  180 : 120,
+    minHeight: isDesktop ? 180 : 120,
     maxHeight: 350,
     overflow: "hidden",
     padding: 10,
-    backgroundColor: "#254"
+    backgroundColor: "rgba(0,0,0,0.4)"
   }),
   eventTitle: {
     padding: 0,
     margin: 0,
     marginLeft: 0,
-    color: "#fff",
+    color: "rgba(255,255,255,0.9)",
     fontFamily: "Scope One"
   },
   eventImage: ({ isDesktop }) => ({

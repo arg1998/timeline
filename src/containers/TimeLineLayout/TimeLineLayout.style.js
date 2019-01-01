@@ -1,7 +1,7 @@
 import injectSheet from "react-jss";
 
 const BAR_WIDTH = 6; // in pixels
-const verticalBarColor = "#FFF";
+const verticalBarColor = "#0092A6";
 
 const containerStyle = {
   timeLine: {

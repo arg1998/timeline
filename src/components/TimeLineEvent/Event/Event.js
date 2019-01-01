@@ -41,7 +41,7 @@ function Event(props) {
               className={classes.eventImage}
               src={require("../../../res/images/reactbanner.png")}
             />
-            <p style={{ display: "inline", fontFamily: "Philosopher" }}>
+            <p style={{ display: "inline", fontFamily: "Philosopher" ,color:'rgba(255,255,255,0.9)'}}>
               {description}
             </p>
           </div>
