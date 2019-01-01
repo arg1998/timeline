@@ -2,6 +2,7 @@ import injectSheet from "react-jss";
 
 const styles = {
   eventRow: {
+    userSelect: "none", 
     width: "100%",
     marginBottom: 60,
     position: "relative",

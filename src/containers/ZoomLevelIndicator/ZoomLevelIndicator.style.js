@@ -4,6 +4,7 @@ const BAR_WIDTH = 4;
 const containerStyle = {
   rootContainer: {
     position: "relative",
+    userSelect: "none",   
     display: "flex",
     margin: [0, "auto"],
     justifyContent: "space-between",
