@@ -1,162 +1,162 @@
 export default [
   {
-    key: "0",
+    key: "954888492",
     title: "This Is Some Title and this is a long one",
-    date: "1934",
+    date: new Date(),
     description:
       "ccusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "1",
+    key: "1108886145",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "2",
+    key: "1426678951",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "3",
+    key: "1353768716",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "4",
+    key: "1415225207",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "5",
+    key: "1889244011",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "6",
+    key: "4235169166",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "7",
+    key: "2999437013",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "8",
+    key: "4247919880",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "9",
+    key: "1222135681",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "10",
+    key: "326170232",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "11",
+    key: "3410273112",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "12",
+    key: "3226084480",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "13",
+    key: "2169498709",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "14",
+    key: "3521491888",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "15",
+    key: "617424537",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "16",
+    key: "2171625724",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "17",
+    key: "678692486",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "18",
+    key: "1882765619",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   },
   {
-    key: "19",
+    key: "1912496402",
     title: "This Is Some Title",
-    date: "1937",
+    date: new Date(),
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iustoodio dignissimos ducimus qui blanditiis praesentium",
-    image: require("./images/reactbanner.png")
+    imageUrl: "/img/reactbanner.png"
   }
 ];

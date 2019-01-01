@@ -44,8 +44,7 @@ const styles = {
     marginLeft: 0,
     color: "rgba(255,255,255,0.9)",
     fontFamily: "Scope One",
-    fontSize: 26,
-
+    fontSize: 26
   },
   eventImage: ({ isDesktop }) => ({
     width: isDesktop ? 160 : 100,
@@ -57,7 +56,7 @@ const styles = {
     display: "inline",
     fontFamily: "Philosopher",
     color: "rgba(180,180,180,0.9)",
-    fontSize: 22,
+    fontSize: 22
   },
   eventOptions: ({ isDesktop }) => ({
     height: isDesktop ? 64 : 32,
@@ -73,6 +72,12 @@ const styles = {
   },
   left: {
     left: 0
+  },
+  clearFix: {
+    "&:after": { content: '""', clear: "both", display: "table" }
+  },
+  eventDate:{
+    color: '#ccc'
   }
 };
 

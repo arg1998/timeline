@@ -4,6 +4,13 @@ import classNames from "classnames";
 import EventStyles from "./Event.style";
 import EventOption from "../EventOption/EventOption";
 
+const DATE_OPTIONS = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric"
+};
+
 function Event(props) {
   const {
     classes,
@@ -36,14 +43,24 @@ function Event(props) {
         {/* actual container to hold the event data (images, text, title and ...) */}
         <div className={classes.eventBox}>
           <h2 className={classes.eventTitle}>{title}</h2>
-          <div>
-            <img
-              alt=""
-              className={classes.eventImage}
-              src={"/img/reactbanner.png"}
-            />
-            <p className={classes.eventDescription}>
-              {description}
+
+          <div className={classes.clearFix}>
+            <img alt="" className={classes.eventImage} src={imageUrl} />
+            <p className={classes.eventDescription}>{description}</p>
+          </div>
+
+          <div
+            style={{
+              width: "100%",
+              padding: 2,
+              paddingTop: 5,
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "flex-end"
+            }}
+          >
+            <p className={classes.eventDate}>
+              {date.toLocaleDateString("en-US", DATE_OPTIONS)}
             </p>
           </div>
         </div>
@@ -52,8 +69,7 @@ function Event(props) {
           className={classNames({
             [classes.eventOptions]: true,
             [classes.right]: isRight,
-            [classes.left]: !isRight,
-
+            [classes.left]: !isRight
           })}
         >
           <EventOption type="info" />
