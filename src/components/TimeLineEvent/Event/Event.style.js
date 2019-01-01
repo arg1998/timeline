@@ -13,7 +13,7 @@ const styles = {
   horizontalBar: ({ horizontalBarSize }) => ({
     width: "100%",
     height: horizontalBarSize,
-    backgroundColor: "#fff",
+    backgroundColor: "#99b998",
     position: "absolute",
     bottom: -(horizontalBarSize / 2)
   }),
@@ -36,14 +36,16 @@ const styles = {
     maxHeight: 350,
     overflow: "hidden",
     padding: 10,
-    backgroundColor: "#254"
+    backgroundColor: "rgba(0,0,0,0.4)"
   }),
   eventTitle: {
     padding: 0,
-    margin: 0,
+    margin: 4,
     marginLeft: 0,
-    color: "#fff",
-    fontFamily: "Scope One"
+    color: "rgba(255,255,255,0.9)",
+    fontFamily: "Scope One",
+    fontSize: 26,
+
   },
   eventImage: ({ isDesktop }) => ({
     width: isDesktop ? 160 : 100,
@@ -51,6 +53,12 @@ const styles = {
     float: "left",
     marginRight: 10
   }),
+  eventDescription: {
+    display: "inline",
+    fontFamily: "Philosopher",
+    color: "rgba(180,180,180,0.9)",
+    fontSize: 22,
+  },
   eventOptions: ({ isDesktop }) => ({
     height: isDesktop ? 64 : 32,
     display: "flex",

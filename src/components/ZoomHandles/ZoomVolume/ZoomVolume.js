@@ -9,9 +9,11 @@ const ZoomVolume = props => {
       <g>
         <path
           d="M119.115 150h-80l-19.558-38.598L0 73.902l20.443-36.951L40.885 0h80l19.558 38.598L160 76.098l-20.443 36.951L119.115 150z"
-          fill="#65BBE6"
+          fill="#00665c"
+          // stroke="#5e35a6"
+          // strokeWidth={2}
         />
-        <g fill="#20F">
+        <g fill="#000">
           <path d="M40 70.951h80v8.098H40z" />
           {sign === "+" && <path d="M75.951 115V35h8.098v80z" />}
         </g>
