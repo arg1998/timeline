@@ -22,7 +22,7 @@ class App extends Component {
       <Switch>
         <Route path="/playground" render={() => <Play />} />
         <Route path="/timeline" render={() => <TimeLine />} />
-        <Route path="/" component={Layout} />
+        <Route path="/" component={homeLayout} />
       </Switch>
     );
   }

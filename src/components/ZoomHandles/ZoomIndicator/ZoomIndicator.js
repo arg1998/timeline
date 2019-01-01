@@ -17,7 +17,7 @@ const ZoomIndicator = props => {
           <path
             transform="rotate(37.06 74.688 125.262) skewX(3.35)"
             vectorEffect="non-scaling-stroke"
-            stroke="#FFF"
+            stroke="#000"
             strokeLinecap="square"
             d="M69.025 116.18h3.417v41.948h-3.417z"
           />
@@ -26,7 +26,7 @@ const ZoomIndicator = props => {
           transform="translate(59.09 98.067)"
           fontFamily="Philosopher"
           fontWeight={400}
-          fontSize={36}
+          fontSize={46}
         >
           {`${level}`}
         </text>

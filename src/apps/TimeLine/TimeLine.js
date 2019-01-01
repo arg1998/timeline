@@ -5,12 +5,25 @@ import TimeLineStyle from "./TimeLine.style";
 import bp from "../../utils/BreakPoints";
 import TimeLineEvent from "../../components/TimeLineEvent/TimeLineEvent";
 import fakeData from "../../res/FakeJsonData";
+import ZoomLevelIndicator from "../../containers/ZoomLevelIndicator/ZoomLevelIndicator";
+
 class TimeLine extends Component {
   render() {
     const { isDesktop } = this.props;
 
     return (
       <div>
+        <div
+          style={{
+            width: 250,
+            position: "fixed",
+            top: 0,
+            left: `calc(50% - ${250 / 2}px)`,
+            zIndex: 20,
+          }}
+        >
+          <ZoomLevelIndicator levelRange={[1, 10]} />
+        </div>
         <TimeLineLayout isDesktop={isDesktop}>
           {fakeData.map((e, i) => (
             <TimeLineEvent

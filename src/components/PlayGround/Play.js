@@ -1,19 +1,13 @@
 import React, { Component } from "react";
-import LevelIndicator from "./LevelIndicator";
+import ZoomLevelIndicator from "../../containers/ZoomLevelIndicator/ZoomLevelIndicator";
 
 export default class Play extends Component {
   state = { currentLevel: this.props.initialLevel };
 
   render() {
     return (
-      <div>
-        <LevelIndicator
-          initialLevel={5}
-          onVolumeUp={() => console.log("test on volume up")}
-          levelRange={[5, 12]}
-          onVolumeDown={() => console.log("test on volume down")}
-          onToggle={() => console.log("On Toggle")}
-        />
+      <div style={{ width: 250, margin: "0 auto", position: "relative" }}>
+        <ZoomLevelIndicator levelRange={[1, 10]} />
       </div>
     );
   }
