@@ -33,7 +33,7 @@ const containerStyle = {
     right: 10,
     height: BAR_WIDTH,
     width: "90%",
-    background: "#23f",
+    background: "#7e7f74",
     zIndex: 4
   }
 };

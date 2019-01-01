@@ -13,7 +13,7 @@ const styles = {
   horizontalBar: ({ horizontalBarSize }) => ({
     width: "100%",
     height: horizontalBarSize,
-    backgroundColor: "#14568c",
+    backgroundColor: "#99b998",
     position: "absolute",
     bottom: -(horizontalBarSize / 2)
   }),
