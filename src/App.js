@@ -4,8 +4,8 @@ import DesktopLayout from "./apps/LandingPage/Desktop/DesktopLayout";
 import bp from "./utils/BreakPoints";
 import MobileLayout from "./apps/LandingPage/Mobile/MobileLayout";
 import { Route, Switch, withRouter } from "react-router-dom";
-import TimeLineLayout from "../src/containers/TimeLineLayout/TimeLineLayout";
 import TimeLine from "../src/apps/TimeLine/TimeLine";
+import Play from "./components/PlayGround/Play";
 
 class App extends Component {
   render() {
@@ -20,8 +20,9 @@ class App extends Component {
 
     return (
       <Switch>
-        <Route path="/timeline" component={TimeLine} />
-        <Route path="/" component={homeLayout} />
+        <Route path="/playground" render={() => <Play />} />
+        <Route path="/timeline" render={() => <TimeLine />} />
+        <Route path="/" component={Layout} />
       </Switch>
     );
   }
