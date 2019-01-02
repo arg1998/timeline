@@ -49,16 +49,7 @@ function Event(props) {
             <p className={classes.eventDescription}>{description}</p>
           </div>
 
-          <div
-            style={{
-              width: "100%",
-              padding: 2,
-              paddingTop: 5,
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "flex-end"
-            }}
-          >
+          <div className={classes.eventDateContainer}>
             <p className={classes.eventDate}>
               {date.toLocaleDateString("en-US", DATE_OPTIONS)}
             </p>

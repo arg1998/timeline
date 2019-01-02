@@ -67,6 +67,14 @@ const styles = {
     position: "absolute",
     top: "100%"
   }),
+  eventDateContainer: {
+    width: "100%",
+    padding: 2,
+    paddingTop: 5,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end"
+  },
   right: {
     right: 0
   },
@@ -76,8 +84,8 @@ const styles = {
   clearFix: {
     "&:after": { content: '""', clear: "both", display: "table" }
   },
-  eventDate:{
-    color: '#ccc'
+  eventDate: {
+    color: "#ccc"
   }
 };
 
