@@ -8,12 +8,15 @@ import TimeLineEvent from "../../components/TimeLineEvent/TimeLineEvent";
 import fakeData from "../../res/FakeJsonData";
 import ZoomLevelIndicator from "../../containers/ZoomLevelIndicator/ZoomLevelIndicator";
 import ParticleBackground from "../../components/ParticleBackground/ParticleBackground";
+import SideDrawer from "../../components/SideDrawer/SideDrawer";
+import FullInformation from "../../components/FullInformation/FullInformation";
 
 const SCROLL_THRESHOLD = 64;
 
 class TimeLine extends Component {
   state = {
-    scrolled: false
+    scrolled: false,
+    isRightDrawerOpen: true
   };
   _onScrollHandler = () => {
     if (window.scrollY >= SCROLL_THRESHOLD && this.state.scrolled === false) {
@@ -32,39 +35,49 @@ class TimeLine extends Component {
   componentWillUnmount() {
     window.removeEventListener("scroll", this._onScrollHandler);
   }
-
+  _onDrawerCloseHandler = () => this.setState({ isRightDrawerOpen: false });
   render() {
     const { isDesktop, classes } = this.props;
 
     return (
-      <div>
-        {/* the FUCKING Zoom Level Indicator */}
-        <div
-          className={classNames({
-            [classes.zoomLevelIndicatorContainer]: true,
-            [classes.zoomLevelIndicatorContainerAnim]: this.state.scrolled
-          })}
+      <>
+        <SideDrawer
+          isDesktop={isDesktop}
+          open={this.state.isRightDrawerOpen}
+          side="right"
+          onClose={this._onDrawerCloseHandler}
         >
-          <div className={classes.zoomLevelIndicator}>
-            <ZoomLevelIndicator levelRange={[1, 9]} />
+          <FullInformation
+            {...fakeData[1]}
+            onClose={this._onDrawerCloseHandler}
+          />
+        </SideDrawer>
+        <div>
+          {/* the FUCKING Zoom Level Indicator */}
+          <div
+            className={classNames({
+              [classes.zoomLevelIndicatorContainer]: true,
+              [classes.zoomLevelIndicatorContainerAnim]: this.state.scrolled
+            })}
+          >
+            <div className={classes.zoomLevelIndicator}>
+              <ZoomLevelIndicator levelRange={[1, 9]} />
+            </div>
           </div>
+          {/* Particle background  */}
+          <ParticleBackground count={isDesktop ? 40 : 15} touch={isDesktop} />
+          <TimeLineLayout isDesktop={isDesktop}>
+            {fakeData.map((e, i) => (
+              <TimeLineEvent
+                key={e.key}
+                isDesktop={isDesktop}
+                index={i}
+                eventData={e}
+              />
+            ))}
+          </TimeLineLayout>
         </div>
-        {/* Particle background  */}
-        <ParticleBackground
-          count={isDesktop ? 40 : 15}
-          touch={isDesktop ? true : false}
-        />
-        <TimeLineLayout isDesktop={isDesktop}>
-          {fakeData.map((e, i) => (
-            <TimeLineEvent
-              key={e.key}
-              isDesktop={isDesktop}
-              index={i}
-              eventData={e}
-            />
-          ))}
-        </TimeLineLayout>
-      </div>
+      </>
     );
   }
 }
