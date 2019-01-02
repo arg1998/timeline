@@ -1,0 +1,510 @@
+{
+  "config": {
+    "max_range": 2,
+    "date_conversion_options": {
+      "year": "numeric",
+      "month": "long",
+      "day": "numeric"
+    },
+    "colors": [
+      {
+        "horizontal_bar": "#99b998",
+        "hexagon_border": "#7e7f74",
+        "hexagon_center": "#00665c"
+      },
+      {
+        "horizontal_bar": "#95b318",
+        "hexagon_border": "#894014",
+        "hexagon_center": "#02355c"
+      }
+    ]
+  },
+  "data": [
+    {
+      "key": "952330008",
+      "title": "GeForce 256",
+      "imageUrl": "/img/gpus/GEFORCE 256.jpg",
+      "description": "Launched on August 31, 1999, the GeForce 256 (NV10) was the first consumer-level PC graphics chip shipped with hardware transform, lighting, and shading although 3D games utilizing this feature did not appear until later. ",
+      "date": 936041400000,
+      "level": 1
+    },
+    {
+      "key": "2492436263",
+      "title": "GeForce 2 series",
+      "imageUrl": "/img/gpus/GEFOTCE 2.jpg",
+      "description": " Launched in April 2000, the first GeForce2 (NV15) was another high-performance graphics chip. Nvidia moved to a twin texture processor per pipeline (4x2) design, doubling texture fillrate per clock compared to GeForce 256.r. ",
+      "date": 954531000000,
+      "level": 1
+    },
+    {
+      "key": "3625847669",
+      "title": "GeForce 3 series",
+      "imageUrl": "/img/gpus/GFORCE 3.jpg",
+      "description": "Launched in February 2001, the GeForce3 (NV20) introduced programmable vertex and pixel shaders to the GeForce family and to consumer-level graphics accelerators. ",
+      "date": 980973000000,
+      "level": 1
+    },
+    {
+      "key": "2236294078",
+      "title": "GeForce 4 series",
+      "imageUrl": "/img/gpus/GeForce4 400.jpg",
+      "description": "Launched in February 2002, the then-high-end GeForce4 Ti (NV25) was mostly a refinement to the GeForce3. The biggest advancements included enhancements to anti-aliasing capabilities. ",
+      "date": 1012509000000,
+      "level": 1
+    },
+    {
+      "key": "1103217222",
+      "title": "GeForce FX series",
+      "imageUrl": "/img/gpus/GEFORCE FX.jpg",
+      "description": "Launched in 2003, the GeForce FX (NV30) was a huge change in architecture compared to its predecessors. The GPU was designed not only to support the new Shader Model 2 specification but also to perform well on older titles.  ",
+      "date": 1041379200000,
+      "level": 1
+    },
+    {
+      "key": "4257434897",
+      "title": "GeForce 6 series",
+      "imageUrl": "/img/gpus/GEFORCE 6.jpg",
+      "description": "Launched in April 2004, the GeForce 6 (NV40) added Shader Model 3.0 support to the GeForce family, while correcting the weak floating point shader performance of its predecessor.  ",
+      "date": 1080761400000,
+      "level": 1
+    },
+    {
+      "key": "1587439583",
+      "title": "GeForce 7 series",
+      "imageUrl": "/img/gpus/GEFORCE 7.jpg",
+      "description": "The seventh generation GeForce (G70/NV47) was launched in June 2005 and was the last Nvidia video card series that could support the AGP bus.  ",
+      "date": 1117567800000,
+      "level": 1
+    },
+    {
+      "key": "2712063172",
+      "title": "GeForce 8 series",
+      "imageUrl": "/img/gpus/GEFORCE 8.jpg",
+      "description": "Released on November 8, 2006, the eighth-generation GeForce (originally called G80) was the first ever GPU to fully support Direct3D 10. Manufactured using a 90 nm process and built around the new Tesla micro-architecture.",
+      "date": 1162931400000,
+      "level": 1
+    },
+    {
+      "key": "713284646",
+      "title": "GeForce 8100 mGPU",
+      "imageUrl": "/img/gpus/8100.jpg",
+      "description": "",
+      "date": 1199145600000,
+      "level": 2
+    },
+    {
+      "key": "3595996709",
+      "title": "GeForce 8200 mGPU",
+      "imageUrl": "/img/gpus/8200.jpg",
+      "description": "",
+      "date": 1199145600000,
+      "level": 2
+    },
+    {
+      "key": "3352633465",
+      "title": "GeForce 8300 mGPU",
+      "imageUrl": "/img/gpus/8300.jpg",
+      "description": "",
+      "date": 1199145600000,
+      "level": 2
+    },
+    {
+      "key": "2417940925",
+      "title": "GeForce 8300GS mGPU",
+      "imageUrl": "/img/gpus/8300gs.jpg",
+      "description": "",
+      "date": 1183235400000,
+      "level": 2
+    },
+    {
+      "key": "27690605",
+      "title": "GeForce 8400 GS mGPU",
+      "imageUrl": "/img/gpus/8400 gs.jpg",
+      "description": "",
+      "date": 1184445000000,
+      "level": 2
+    },
+
+    {
+      "key": "3787466589",
+      "title": "GeForce 9 series",
+      "imageUrl": "/img/gpus/GEFORCE 9.jpg",
+      "description": "The first product was released on February 21, 2008. Not even four months older than the initial G92 release, all 9-series designs are simply revisions to existing late 8-series products.",
+      "date": 1203539400000,
+      "level": 1
+    },
+    {
+      "key": "2374010768",
+      "title": "GeForce 9300 mGPU",
+      "imageUrl": "/img/gpus/9300.jpg",
+      "description": "",
+      "date": 1222806600000,
+      "level": 2
+    },
+    {
+      "key": "2382368882",
+      "title": "GeForce 9400 mGPU",
+      "imageUrl": "/img/gpus/9400.jpg",
+      "description": "",
+      "date": 1222806600000,
+      "level": 2
+    },
+    {
+      "key": "1090509858",
+      "title": "GeForce 9300 GE",
+      "imageUrl": "/img/gpus/9300 ge.jpg",
+      "description": "",
+      "date": 1212262200000,
+      "level": 2
+    },
+    {
+      "key": "3317650865",
+      "title": "GeForce 9300G",
+      "imageUrl": "/img/gpus/9300 g.jpg",
+      "description": "",
+      "date": 1212262200000,
+      "level": 2
+    },
+
+    {
+      "key": "2557445876",
+      "title": "GeForce 100 series",
+      "imageUrl": "/img/gpus/GEFORCE 9.jpg",
+      "description": "The first product was released on February 21, 2008. Not even four months older than the initial G92 release, all 9-series designs are simply revisions to existing late 8-series products.",
+      "date": 1203539400000,
+      "level": 1
+    },
+    {
+      "key": "1553240052",
+      "title": "GeForce G100",
+      "imageUrl": "/img/gpus/G 100.jpg",
+      "description": "",
+      "date": 1236630600000,
+      "level": 2
+    },
+    {
+      "key": "2750713876",
+      "title": "GeForce GT120",
+      "imageUrl": "/img/gpus/GT 120.jpg",
+      "description": "",
+      "date": 1236630600000,
+      "level": 2
+    },
+    {
+      "key": "3205564327",
+      "title": "GeForce GT130",
+      "imageUrl": "/img/gpus/GT 130.jpg",
+      "description": "",
+      "date": 1236630600000,
+      "level": 2
+    },
+    {
+      "key": "3887916943",
+      "title": "GeForce GT 140",
+      "imageUrl": "/img/gpus/GT 140.jpg",
+      "description": "",
+      "date": 1285187400000,
+      "level": 2
+    },
+    {
+      "key": "117292515",
+      "title": "GeForce GTS150",
+      "imageUrl": "/img/gpus/GTS 150.jpg",
+      "description": "",
+      "date": 1236630600000,
+      "level": 2
+    },
+
+    {
+      "key": "2706093603",
+      "title": "GeForce 200 series",
+      "imageUrl": "/img/gpus/GEFORCE 200.jpg",
+      "description": "Based on the GT200 graphics processor consisting of 1.4 billion transistors, codenamed Tesla, the 200 series was launched on June 16, 2008.[10] The next generation of the GeForce series takes the card-naming scheme in a new direction. ",
+      "date": 1213558200000,
+      "level": 1
+    },
+    {
+      "key": "3146975769",
+      "title": "GeForce 205",
+      "imageUrl": "/img/gpus/205.jpg",
+      "description": "",
+      "date": 1259181000000,
+      "level": 2
+    },
+    {
+      "key": "964041358",
+      "title": "GeForce 210",
+      "imageUrl": "/img/gpus/210.jpg",
+      "description": "",
+      "date": 1255293000000,
+      "level": 2
+    },
+    {
+      "key": "2716240982",
+      "title": "GeForce GT220",
+      "imageUrl": "/img/gpus/220.jpg",
+      "description": "",
+      "date": 1255293000000,
+      "level": 2
+    },
+    {
+      "key": "2348228715",
+      "title": "GeForce GT230 v.1",
+      "imageUrl": "/img/gpus/230 V.1.jpg",
+      "description": "",
+      "date": 1230768000000,
+      "level": 2
+    },
+    {
+      "key": "2601895232",
+      "title": "GeForce GT230 v.2",
+      "imageUrl": "/img/gpus/230 V.2.jpg",
+      "description": "",
+      "date": 1230768000000,
+      "level": 2
+    },
+    {
+      "key": "2637428876",
+      "title": "GeForce 300 series",
+      "imageUrl": "/img/gpus/GEFORCE 200.jpg",
+      "description": "Based on the GT200 graphics processor consisting of 1.4 billion transistors, codenamed Tesla, the 200 series was launched on June 16, 2008.[10] The next generation of the GeForce series takes the card-naming scheme in a new direction. ",
+      "date": 1213558200000,
+      "level": 1
+    },
+    {
+      "key": "3645154640",
+      "title": "GeForce 400 series",
+      "imageUrl": "/img/gpus/GEFORCE 400.jpg",
+      "description": "On April 7, 2010, Nvidia released the GeForce GTX 470 and GTX 480, the first cards based on the new Fermi architecture, codenamed GF100; they were the first Nvidia GPUs to utilize 1 GB or more of GDDR5 memory.  ",
+      "date": 1270582200000,
+      "level": 1
+    },
+    {
+      "key": "3844657054",
+      "title": "GeForce 405(OEM)",
+      "imageUrl": "/img/gpus/405.jpg",
+      "description": "",
+      "date": 1316115000000,
+      "level": 2
+    },
+    {
+      "key": "2858946570",
+      "title": "GeForce GT420(OEM)",
+      "imageUrl": "/img/gpus/GT 420.jpg",
+      "description": "",
+      "date": 1283455800000,
+      "level": 2
+    },
+    {
+      "key": "3490954604",
+      "title": "GeForce GT430(OEM)",
+      "imageUrl": "/img/gpus/430.jpg",
+      "description": "",
+      "date": 1286742600000,
+      "level": 2
+    },
+    {
+      "key": "4155588505",
+      "title": "GeForce GT430",
+      "imageUrl": "/img/gpus/430.jpg",
+      "description": "",
+      "date": 1286742600000,
+      "level": 2
+    },
+    {
+      "key": "3153138234",
+      "title": "GeForce GT440",
+      "imageUrl": "/img/gpus/440.jpg",
+      "description": "",
+      "date": 1296505800000,
+      "level": 2
+    },
+    {
+      "key": "1818808554",
+      "title": "GeForce 500 series",
+      "imageUrl": "/img/gpus/GEFORCE 400.jpg",
+      "description": "On April 7, 2010, Nvidia released the GeForce GTX 470 and GTX 480, the first cards based on the new Fermi architecture, codenamed GF100; they were the first Nvidia GPUs to utilize 1 GB or more of GDDR5 memory.  ",
+      "date": 1270582200000,
+      "level": 1
+    },
+    {
+      "key": "2209838319",
+      "title": "GeForce GT520",
+      "imageUrl": "/img/gpus/520.jpg",
+      "description": "",
+      "date": 1302550200000,
+      "level": 2
+    },
+    {
+      "key": "1015474996",
+      "title": "GeForce GT530",
+      "imageUrl": "/img/gpus/530.jpg",
+      "description": "",
+      "date": 1305315000000,
+      "level": 2
+    },
+
+    {
+      "key": "455260371",
+      "title": "GeForce GT545DDR3",
+      "imageUrl": "/img/gpus/545.jpg",
+      "description": "",
+      "date": 1302550200000,
+      "level": 2
+    },
+    {
+      "key": "406853278",
+      "title": "GeForce GT545GD ",
+      "imageUrl": "/img/gpus/545 GD.jpg",
+      "description": "",
+      "date": 1302550200000,
+      "level": 2
+    },
+    {
+      "key": "372048259",
+      "title": "GeForce GTX 550 Ti ",
+      "imageUrl": "/img/gpus/550.jpg",
+      "description": "",
+      "date": 1300134600000,
+      "level": 2
+    },
+    {
+      "key": "4100365790",
+      "title": "GeForce 600 series",
+      "imageUrl": "/img/gpus/GEFORCE 8.jpg",
+      "description": "Asus Nvidia GeForce GTX 650 Ti, a PCI Express 3.0 ×16 graphics card In September 2010, Nvidia announced that the successor to Fermi microarchitecture would be the Kepler microarchitecture, manufactured with the TSMC 28 nm fabrication process.   ",
+      "date": 1283283000000,
+      "level": 1
+    },
+    {
+      "key": "336793998",
+      "title": "GeForce 605",
+      "imageUrl": "/img/gpus/605.jpg",
+      "description": "",
+      "date": 1333395000000,
+      "level": 2
+    },
+
+    {
+      "key": "2177305684",
+      "title": "GeForce GT610",
+      "imageUrl": "/img/gpus/610.jpg",
+      "description": "",
+      "date": 1337023800000,
+      "level": 2
+    },
+    {
+      "key": "662434342",
+      "title": "GeForce 700 series",
+      "imageUrl": "/img/gpus/GEFORCE 8.jpg",
+      "description": "Asus Nvidia GeForce GTX 650 Ti, a PCI Express 3.0 ×16 graphics card In September 2010, Nvidia announced that the successor to Fermi microarchitecture would be the Kepler microarchitecture, manufactured with the TSMC 28 nm fabrication process.   ",
+      "date": 1283283000000,
+      "level": 1
+    },
+    {
+      "key": "1720883857",
+      "title": "GeForce 800M series",
+      "imageUrl": "/img/gpus/GEFORCE 8.jpg",
+      "description": "Asus Nvidia GeForce GTX 650 Ti, a PCI Express 3.0 ×16 graphics card In September 2010, Nvidia announced that the successor to Fermi microarchitecture would be the Kepler microarchitecture, manufactured with the TSMC 28 nm fabrication process.   ",
+      "date": 1283283000000,
+      "level": 1
+    },
+    {
+      "key": "4105560447",
+      "title": "GeForce 900 series",
+      "imageUrl": "/img/gpus/GEFORCE 900.jpg",
+      "description": "In March 2013, Nvidia announced that the successor to Kepler would be the Maxwell microarchitecture. It was released in September 2014. This was the last GeForce series to support analog video output through DVI-I.   ",
+      "date": 1362083400000,
+      "level": 1
+    },
+    {
+      "key": "2835314220",
+      "title": "GeForce 10 series",
+      "imageUrl": "/img/gpus/GEFORCE 10.jpg",
+      "description": "In March 2014, Nvidia announced that the successor to Maxwell would be the Pascal microarchitecture; announced on 6 May 2016 and released on 27 May 2016.",
+      "date": 1393619400000,
+      "level": 1
+    },
+    {
+      "key": "123937488",
+      "title": "GeForce GT1030(DDR4)",
+      "imageUrl": "/img/gpus/1030.jpg",
+      "description": "",
+      "date": 1520800200000,
+      "level": 2
+    },
+    {
+      "key": "3063183174",
+      "title": "GeForce GT1030",
+      "imageUrl": "/img/gpus/GT 1030.jpg",
+      "description": "",
+      "date": 1494963000000,
+      "level": 2
+    },
+    {
+      "key": "1978096364",
+      "title": "GeForce GTX 1050 2GB",
+      "imageUrl": "/img/gpus/1050 2GB.jpg",
+      "description": "",
+      "date": 1477341000000,
+      "level": 2
+    },
+    {
+      "key": "1654286002",
+      "title": "GeForce GTX 1050 3GB",
+      "imageUrl": "/img/gpus/1050 3GB.jpg",
+      "description": "",
+      "date": 1525116600000,
+      "level": 2
+    },
+    {
+      "key": "2635809621",
+      "title": "GeForce GTX 1050Ti",
+      "imageUrl": "/img/gpus/1050 TI.jpg",
+      "description": "",
+      "date": 1477341000000,
+      "level": 2
+    },
+
+    {
+      "key": "814677030",
+      "title": "GeForce 20 series",
+      "imageUrl": "/img/gpus/GEFORCE 8.jpg",
+      "description": "In August 2018, Nvidia announced the GeForce successor to Pascal. The new microarchitecture name was revealed as Turing at the Siggraph 2018 conference. This new GPU microarchitecture is aimed to accelerate the real-time ray tracing support and AI Inferencing.",
+      "date": 1533065400000,
+      "level": 1
+    },
+    {
+      "key": "941051788",
+      "title": "GeForce RTX 2060",
+      "imageUrl": "/img/gpus/2060.jpg",
+      "description": "",
+      "date": 1547497800000,
+      "level": 2
+    },
+    {
+      "key": "2921625138",
+      "title": "GeForce RTX2070",
+      "imageUrl": "/img/gpus/2070.jpg",
+      "description": "",
+      "date": 1539721800000,
+      "level": 2
+    },
+    {
+      "key": "2125602727",
+      "title": "GeForce RTX2080",
+      "imageUrl": "/img/gpus/2080.jpg",
+      "description": "",
+      "date": 1537385400000,
+      "level": 2
+    },
+    {
+      "key": "1996477211",
+      "title": "NVIDIA TITAN RTX",
+      "imageUrl": "/img/gpus/NVIDIATITAN.jpg",
+      "description": "",
+      "date": 1545078600000,
+      "level": 2
+    }
+  ]
+}
