@@ -7,6 +7,7 @@ import FourthHexagon from "../../../components/Hexagons/FourthHexagon/FourthHexa
 import ThirdHexagon from "../../../components/Hexagons/ThirdHexagon/ThirdHexagon";
 import SecondHexagon from "../../../components/Hexagons/SecondHexagon/SecondHexagon";
 import AbstractHexagon from "../../../components/AbstractHexagon/AbstractHexagon";
+import Ratio from "../../../components/Warning/Ratio";
 
 class DesktopLayout extends Component {
   state = { activeIndex: -1 };
@@ -20,17 +21,16 @@ class DesktopLayout extends Component {
 
     if (aspectRatio < 1.5) {
       return (
-        <p>
-          Aspect Ratio is not supported, current AR is {aspectRatio.toFixed(2)}
-          but to see the website you must provide a screen with bigger AR than
-          1.5
-        </p>
+        <>
+          <ParticleBackground count={70} touch={false} />
+          <Ratio />
+        </>
       );
     }
 
     return (
       <div>
-        <ParticleBackground count={100} touch={true} />
+        <ParticleBackground count={80} touch={true} />
         <div className={classes.navBar}>
           <img
             alt=""
