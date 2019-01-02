@@ -4,9 +4,9 @@ import propType from "prop-types";
 import BackDrop from "../BackDrop/BackDrop";
 import sideDrawerStyle from "./SideDrawer.style";
 
-
 const SideDrawer = props => {
   const {
+    children,
     open,
     onClose,
     side,
@@ -14,7 +14,6 @@ const SideDrawer = props => {
     shouldCloseOnDrawerClick,
     shouldCloseOnBackDropClick
   } = props;
- 
 
   return (
     <>
@@ -27,8 +26,13 @@ const SideDrawer = props => {
           [classes.rightSide]: side === "right"
         })}
         onClick={shouldCloseOnDrawerClick ? onClose : null}
+      >
+        {children}
+      </div>
+      <BackDrop
+        open={open}
+        onClick={shouldCloseOnBackDropClick ? onClose : null}
       />
-      <BackDrop open={open} onClick={shouldCloseOnBackDropClick ? onClose : null} />
     </>
   );
 };
