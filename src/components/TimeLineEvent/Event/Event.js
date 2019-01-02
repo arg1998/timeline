@@ -5,7 +5,6 @@ import EventStyles from "./Event.style";
 import EventOption from "../EventOption/EventOption";
 
 const DATE_OPTIONS = {
-  weekday: "long",
   year: "numeric",
   month: "long",
   day: "numeric"
@@ -14,12 +13,18 @@ const DATE_OPTIONS = {
 function Event(props) {
   const {
     classes,
+    index,
     isDesktop,
     side,
     title,
     description,
     date,
-    imageUrl
+    imageUrl,
+    level,
+    dateOptions,
+    onFullInfoClick,
+    onActive,
+    active
   } = props;
   const isRight = side === "right";
   let rightSideGap = null;
@@ -41,8 +46,10 @@ function Event(props) {
 
       <div className={classes.contentContainer}>
         {/* actual container to hold the event data (images, text, title and ...) */}
-        <div className={classes.eventBox}>
-          <h2 className={classes.eventTitle}>{title}</h2>
+        <div className={classes.eventBox} onClick={() => onActive(index)} >
+          <h2 className={classes.eventTitle}>
+            {title} (Level {level})
+          </h2>
 
           <div className={classes.clearFix}>
             <img alt="" className={classes.eventImage} src={imageUrl} />
@@ -51,7 +58,10 @@ function Event(props) {
 
           <div className={classes.eventDateContainer}>
             <p className={classes.eventDate}>
-              {date.toLocaleDateString("en-US", DATE_OPTIONS)}
+              {new Date(date).toLocaleDateString(
+                "en-US",
+                dateOptions || DATE_OPTIONS
+              )}
             </p>
           </div>
         </div>
@@ -59,11 +69,12 @@ function Event(props) {
         <div
           className={classNames({
             [classes.eventOptions]: true,
+            [classes.eventOptionShow]: active,
             [classes.right]: isRight,
             [classes.left]: !isRight
           })}
         >
-          <EventOption type="info" />
+          <EventOption type="info" onClick={() => onFullInfoClick(index)} />
           <EventOption type="link" />
         </div>
       </div>
@@ -99,12 +110,14 @@ function Event(props) {
 
 Event.propTypes = {
   side: pt.string,
-  horizontalBarSize: pt.number
+  horizontalBarSize: pt.number,
+  onFullInfoClick: pt.func
 };
 
 Event.defaultProps = {
   side: "right",
-  horizontalBarSize: 6
+  horizontalBarSize: 6,
+  onFullInfoClick: () => null
 };
 
 export default EventStyles(Event);

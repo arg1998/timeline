@@ -10,10 +10,10 @@ const styles = {
     flexDirection: "row",
     position: "relative"
   }),
-  horizontalBar: ({ horizontalBarSize }) => ({
+  horizontalBar: ({ horizontalBarSize, horizontalBarColor }) => ({
     width: "100%",
     height: horizontalBarSize,
-    backgroundColor: "#99b998",
+    backgroundColor: horizontalBarColor || "#99b998",
     position: "absolute",
     bottom: -(horizontalBarSize / 2)
   }),
@@ -59,14 +59,22 @@ const styles = {
     fontSize: 22
   },
   eventOptions: ({ isDesktop }) => ({
-    height: isDesktop ? 64 : 32,
-    display: "flex",
+    height: isDesktop ? 64 : 16,
     flexDirection: isDesktop ? "row" : "row-reverse",
     justifyContent: "space-between",
     paddingTop: 5,
     position: "absolute",
-    top: "100%"
+    top: "90%",
+    opacity: 0,
+    display: "flex",
+    transition: "top 500ms, opacity 500ms"
   }),
+  eventOptionShow: {
+    // display: "flex",
+    opacity: [1, "!important"],
+    top: ["100%", "!important"]
+  },
+
   eventDateContainer: {
     width: "100%",
     padding: 2,
