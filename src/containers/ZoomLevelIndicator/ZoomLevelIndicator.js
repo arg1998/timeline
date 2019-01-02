@@ -45,7 +45,7 @@ class LevelIndicator extends Component {
     if (this.props.shouldToggle) {
       this.setState(
         prevState => ({ show: !prevState.show }),
-        () => this.props.onToggle(this.state.show)
+        () => this.props.onToggle(this.state.level)
       );
     }
   };

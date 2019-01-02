@@ -6,30 +6,45 @@ import BarIconHexagon from "../BarIconHexagon/BarIconHexagon";
 import Fade from "react-reveal/Fade";
 
 function TimeLineEvent(props) {
-  const { classes, index, isDesktop, eventData } = props;
+  const {
+    classes,
+    index,
+    isDesktop,
+    eventData,
+    onActive,
+    active,
+    config,
+    onFullInfoClick
+  } = props;
   let side = "right";
 
   if (isDesktop) {
     side = index % 2 === 0 ? "right" : "left";
   }
-
+  const colorConfig = config.colors[eventData.level - 1];
   return (
     <li className={classes.eventRow}>
       {/* cross icon */}
       <div className={classes.barIcon}>
-        <BarIconHexagon />
+        <BarIconHexagon
+          borderColor={colorConfig.hexagon_border}
+          centerColor={colorConfig.hexagon_center}
+          active={active}
+        />
       </div>
-      <Fade >
-        <div
-          style={{
-            width: "100%",
-            marginTop: 80,
-            position: "relative",
-            display: "flex",
-            flexDirection: "row"
-          }}
-        >
-          <Event side={side} {...eventData} isDesktop={isDesktop} />
+      <Fade>
+        <div className={classes.wrapper}>
+          <Event
+            side={side}
+            index={index}
+            horizontalBarColor={colorConfig.horizontal_bar}
+            isDesktop={isDesktop}
+            dateOptions={config.date_conversion_options}
+            onFullInfoClick={onFullInfoClick}
+            onActive={onActive}
+            active={active}
+            {...eventData}
+          />
         </div>
       </Fade>
     </li>
@@ -39,7 +54,8 @@ function TimeLineEvent(props) {
 TimeLineEvent.propTypes = {
   index: pt.number.isRequired,
   data: pt.object,
-  barIconSize: pt.number
+  barIconSize: pt.number,
+  onFullInfoClick: pt.func.isRequired
 };
 TimeLineEvent.defaultProps = {
   barIconSize: 64

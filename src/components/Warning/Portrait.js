@@ -9,11 +9,10 @@ function Portrait() {
         height: "100%",
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "lightblue"
+        alignItems: "center"
       }}
     >
-      <img src={mobile} style={{ width: 300, height: 400 }} />
+      <img src={mobile} style={{ width: 300, height: '80%' }} />
     </div>
   );
 }

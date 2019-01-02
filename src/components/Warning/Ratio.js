@@ -10,7 +10,6 @@ function Ratio() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "lightblue"
       }}
     >
       <img src={warning} style={{ width: 300, height: 400 }} />

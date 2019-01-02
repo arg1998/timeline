@@ -13,6 +13,7 @@ import SecondHexagon from "../../../components/Hexagons/SecondHexagon/SecondHexa
 import ThirdHexagon from "../../../components/Hexagons/ThirdHexagon/ThirdHexagon";
 import FourthHexagon from "../../../components/Hexagons/FourthHexagon/FourthHexagon";
 import PrevAndNext from "../../../components/SliderArrow/Arrow.style";
+import Portrait from "../../../components/Warning/Portrait";
 
 const Arrow = props => {
   const { classes, className, style, onClick, side } = props;
@@ -57,12 +58,17 @@ class MobileLayout extends Component {
     };
 
     if (aspectRatio >= 1) {
-      return <p>use this website in portrait Mode please</p>;
+      return (
+        <>
+          <ParticleBackground count={40} />
+          <Portrait />
+        </>
+      );
     }
 
     return (
       <div>
-        <ParticleBackground count={50} touch={false} />
+        <ParticleBackground count={40} touch={false} />
         <div className={classes.mobileContainer}>
           <div className={classes.main}>
             <AbstractHexagon
