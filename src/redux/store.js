@@ -1,5 +1,5 @@
 import { createStore, compose, combineReducers } from "redux";
-import globalConfigsReducer from "./reducers/configReducer";
+import timelineReducer from "./reducers/TimeLine.Reducer";
 
 const composeEnhancers =
   process.env.NODE_ENV === "development"
@@ -7,7 +7,7 @@ const composeEnhancers =
     : null || compose;
 
 const rootReducer = combineReducers({
-  globalConfigs: globalConfigsReducer
+  timeline: timelineReducer
 });
 
 const store = createStore(rootReducer);
