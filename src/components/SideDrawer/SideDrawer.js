@@ -1,12 +1,12 @@
 import React from "react";
 import classNames from "classnames";
 import propType from "prop-types";
-import BackDrop from "../../containers/BackDrop/BackDrop";
+import BackDrop from "../BackDrop/BackDrop";
 import sideDrawerStyle from "./SideDrawer.style";
 
-//TODO: Animations are not Included
 const SideDrawer = props => {
   const {
+    children,
     open,
     onClose,
     side,
@@ -14,21 +14,25 @@ const SideDrawer = props => {
     shouldCloseOnDrawerClick,
     shouldCloseOnBackDropClick
   } = props;
-  if (!open) {
-    return null;
-  }
 
   return (
     <>
       <div
         className={classNames({
           [classes.sideDrawer]: true,
+          [classes.open]: open,
+          [classes.close]: !open,
           [classes.leftSide]: side === "left",
           [classes.rightSide]: side === "right"
         })}
         onClick={shouldCloseOnDrawerClick ? onClose : null}
+      >
+        {children}
+      </div>
+      <BackDrop
+        open={open}
+        onClick={shouldCloseOnBackDropClick ? onClose : null}
       />
-      <BackDrop onClick={shouldCloseOnBackDropClick ? onClose : null} />
     </>
   );
 };

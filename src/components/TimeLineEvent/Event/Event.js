@@ -1,7 +1,15 @@
 import React from "react";
 import pt from "prop-types";
-import Fade from "react-reveal/Fade";
+import classNames from "classnames";
 import EventStyles from "./Event.style";
+import EventOption from "../EventOption/EventOption";
+
+const DATE_OPTIONS = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric"
+};
 
 function Event(props) {
   const {
@@ -31,20 +39,32 @@ function Event(props) {
       {/* RIGHT SIDE => empty space gap between vertical bar and event content*/}
       {rightSideGap}
 
-      {/* actual container to hold the event data (images, text, title and ...) */}
       <div className={classes.contentContainer}>
+        {/* actual container to hold the event data (images, text, title and ...) */}
         <div className={classes.eventBox}>
           <h2 className={classes.eventTitle}>{title}</h2>
-          <div>
-            <img
-              alt=""
-              className={classes.eventImage}
-              src={require("../../../res/images/reactbanner.png")}
-            />
-            <p style={{ display: "inline", fontFamily: "Philosopher" ,color:'rgba(255,255,255,0.9)'}}>
-              {description}
+
+          <div className={classes.clearFix}>
+            <img alt="" className={classes.eventImage} src={imageUrl} />
+            <p className={classes.eventDescription}>{description}</p>
+          </div>
+
+          <div className={classes.eventDateContainer}>
+            <p className={classes.eventDate}>
+              {date.toLocaleDateString("en-US", DATE_OPTIONS)}
             </p>
           </div>
+        </div>
+        {/* event options bellow the event box */}
+        <div
+          className={classNames({
+            [classes.eventOptions]: true,
+            [classes.right]: isRight,
+            [classes.left]: !isRight
+          })}
+        >
+          <EventOption type="info" />
+          <EventOption type="link" />
         </div>
       </div>
 

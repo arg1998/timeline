@@ -1,10 +1,10 @@
 import injectSheet from "react-jss";
-const BAR_WIDTH = 4;
+const BAR_WIDTH = 2;
 
 const containerStyle = {
   rootContainer: {
     position: "relative",
-    userSelect: "none",   
+    userSelect: "none",
     display: "flex",
     margin: [0, "auto"],
     justifyContent: "space-between",
@@ -15,17 +15,17 @@ const containerStyle = {
     display: "flex",
     flexDirection: "column",
     height: "100%",
-    zIndex: 5,
+    zIndex: 22,
     justifyContent: "space-around",
     alignItems: "center"
   },
   leftSquare: {
-    width: "15%",
-    zIndex: 5
+    width: "18%",
+    zIndex: 22
   },
   rightSquare: {
-    width: "15%",
-    zIndex: 5
+    width: "18%",
+    zIndex: 22
   },
   bar: {
     position: "absolute",
@@ -34,7 +34,7 @@ const containerStyle = {
     height: BAR_WIDTH,
     width: "90%",
     background: "#7e7f74",
-    zIndex: 4
+    zIndex: 21
   }
 };
 

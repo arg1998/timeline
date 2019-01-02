@@ -40,17 +40,53 @@ const styles = {
   }),
   eventTitle: {
     padding: 0,
-    margin: 0,
+    margin: 4,
     marginLeft: 0,
     color: "rgba(255,255,255,0.9)",
-    fontFamily: "Scope One"
+    fontFamily: "Scope One",
+    fontSize: 26
   },
   eventImage: ({ isDesktop }) => ({
     width: isDesktop ? 160 : 100,
     height: isDesktop ? 140 : 70,
     float: "left",
     marginRight: 10
-  })
+  }),
+  eventDescription: {
+    display: "inline",
+    fontFamily: "Philosopher",
+    color: "rgba(180,180,180,0.9)",
+    fontSize: 22
+  },
+  eventOptions: ({ isDesktop }) => ({
+    height: isDesktop ? 64 : 32,
+    display: "flex",
+    flexDirection: isDesktop ? "row" : "row-reverse",
+    justifyContent: "space-between",
+    paddingTop: 5,
+    position: "absolute",
+    top: "100%"
+  }),
+  eventDateContainer: {
+    width: "100%",
+    padding: 2,
+    paddingTop: 5,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end"
+  },
+  right: {
+    right: 0
+  },
+  left: {
+    left: 0
+  },
+  clearFix: {
+    "&:after": { content: '""', clear: "both", display: "table" }
+  },
+  eventDate: {
+    color: "#ccc"
+  }
 };
 
 export default component => injectSheet(styles)(component);

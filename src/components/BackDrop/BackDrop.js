@@ -10,9 +10,5 @@ BackDrop.propTypes = {
   color: propType.string,
   opacity: propType.number
 };
-BackDrop.defaultProps = {
-  color: "black",
-  opacity: 0.4
-};
 
 export default backDropStyle(BackDrop);
