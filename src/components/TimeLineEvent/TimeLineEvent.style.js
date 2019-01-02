@@ -2,7 +2,7 @@ import injectSheet from "react-jss";
 
 const styles = {
   eventRow: {
-    userSelect: "none", 
+    userSelect: "none",
     width: "100%",
     marginBottom: 60,
     position: "relative",
@@ -18,7 +18,14 @@ const styles = {
       : `calc(0% - ${barIconSize / 2}px)`,
     bottom: `calc(-${barIconSize / 2}px)`,
     zIndex: 2
-  })
+  }),
+  wrapper: {
+    width: "100%",
+    marginTop: 80,
+    position: "relative",
+    display: "flex",
+    flexDirection: "row"
+  }
 };
 
 export default component => injectSheet(styles)(component);
