@@ -70,32 +70,27 @@ function AboutUs(props) {
             isDesktop={isDesktop}
             name="Shima Shiuey"
             bio="Student at University Of Tehran, studying computer engineering.
-            He loves graphics programming and making games from scratch. Now, his
-            focus is on AI and deep learning, specially Computer Vision. He's
-            enthusiastic about back-end engineering and Dev-Ops."
+            She's heavily passionate about AI and Neural Networks and currently is studying
+            DeepLearning stuff.She always want to know how things work in theory and and
+            mathematics can impress the world around us. Last but not least, cats are her best friends."
             image="/img/shima.jpeg"
             socialMedia={[
               {
                 type: "telegram",
-                link: "http://t.me/ARG_1998"
+                link: "http://t.me/Shimalan76"
               },
               {
                 type: "gmail",
-                link: "mailto:arg7971@gmail.com"
-              },
-              {
-                type: "linkedin",
-                link: "https://www.linkedin.com/in/ARG1998/"
+                link: "mailto:shima.wh.2489@gmail.com"
               }
             ]}
           />
           <Developer
             isDesktop={isDesktop}
             name="Shakila Rahban"
-            bio="Student at University Of Tehran, studying computer engineering.
-            He loves graphics programming and making games from scratch. Now, his
-            focus is on AI and deep learning, specially Computer Vision. He's
-            enthusiastic about back-end engineering and Dev-Ops."
+            bio="Student at University Of Tehran, studying computer engineering.She's 
+            interested in Web Design/Development and so curious about Artificial Intelligence.
+            Photography is another field of interest of Shakila. She has a wierd hobby of loving bee-like things !!!!"
             image="/img/shakila.jpg"
             socialMedia={[
               {
@@ -104,11 +99,12 @@ function AboutUs(props) {
               },
               {
                 type: "gmail",
-                link: "mailto:arg7971@gmail.com"
+                link: "mailto:shakila.rahban@gmail.com"
               },
+
               {
-                type: "linkedin",
-                link: "https://www.linkedin.com/in/ARG1998/"
+                type: "instagram",
+                link: "https://www.instagram.com/shakila_rahban/?hl=en"
               }
             ]}
           />
