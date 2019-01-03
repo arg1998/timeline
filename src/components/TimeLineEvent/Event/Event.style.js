@@ -36,7 +36,8 @@ const styles = {
     maxHeight: 350,
     overflow: "hidden",
     padding: 10,
-    backgroundColor: "rgba(0,0,0,0.4)"
+    backgroundColor: "rgba(0,0,0,0.4)",
+    boxShadow: "10px 10px 10px 1px rgba(0,0,0,0.3)",
   }),
   eventTitle: {
     padding: 0,

@@ -6,6 +6,7 @@ import MobileLayout from "./apps/LandingPage/Mobile/MobileLayout";
 import { Route, Switch, withRouter } from "react-router-dom";
 import TimeLine from "../src/apps/TimeLine/TimeLine";
 import Play from "./components/PlayGround/Play";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 class App extends Component {
   render() {
@@ -20,8 +21,9 @@ class App extends Component {
 
     return (
       <Switch>
-        <Route path="/playground" render={() => <Play />} />
-        <Route path="/timeline" render={() => <TimeLine />} />
+        <Route path="/playground" component={Play} />
+        <Route path="/aboutus" component={AboutUs} />
+        <Route path="/timeline" component={TimeLine} />
         <Route path="/" component={homeLayout} />
       </Switch>
     );
@@ -29,8 +31,7 @@ class App extends Component {
 }
 
 const mapSizesToProps = ({ width, height }) => ({
-  isDesktop: width > bp.desktop.minWidth,
-  screen: { w: width, h: height }
+  isDesktop: width > bp.desktop.minWidth
 });
 
 export default withRouter(withSizes(mapSizesToProps)(App));
