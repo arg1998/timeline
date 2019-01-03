@@ -26,7 +26,7 @@ const aboutUsStyles = {
     fontFamily: "MetalOnMetal",
     color: "#eee",
     margin: "0 10px",
-    fontSize: 26
+    fontSize: 24
   },
   container: {
     width: "100%",

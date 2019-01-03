@@ -16,7 +16,7 @@ function SocialMedia(props) {
   }
 
   return (
-    <a href={link}>
+    <a href={link} target="_blank" rel="noopener noreferrer">
       <img
         alt=""
         style={{

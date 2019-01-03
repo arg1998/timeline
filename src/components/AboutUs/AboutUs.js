@@ -100,7 +100,7 @@ function AboutUs(props) {
             socialMedia={[
               {
                 type: "telegram",
-                link: "http://t.me/ARG_1998"
+                link: "http://t.me/shakilaaarbn"
               },
               {
                 type: "gmail",
